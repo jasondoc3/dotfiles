@@ -7,7 +7,7 @@ set rtp+=~/home/vim/bundle/Vundle.vim
 " Use fzf"
 set rtp+=/usr/local/opt/fzf
 
-call vundle#begin()
+call vundle#begin('~/home/vim/bundle')
 Plugin 'VundleVim/Vundle.vim'    "Let vundle manage vundle. required for vundle
 Plugin 'ctrlpvim/ctrlp.vim.git'  "fuzzy file searching
 Plugin 'jiangmiao/auto-pairs'    "automatic bracket insertion
