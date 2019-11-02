@@ -1,0 +1,94 @@
+set nocompatible "required for vundle
+filetype off     "required for vundle
+
+"Set the runtime path to include vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Use fzf"
+set rtp+=/usr/local/opt/fzf
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'    "Let vundle manage vundle. required for vundle
+Plugin 'ctrlpvim/ctrlp.vim.git'  "fuzzy file searching
+Plugin 'jiangmiao/auto-pairs'    "automatic bracket insertion
+Plugin 'scrooloose/nerdtree.git' "directory sidebar
+Plugin 'fatih/vim-go.git'        "go specific vim plugin
+Plugin 'tpope/vim-endwise.git'   "adds 'end' in ruby automatically
+Plugin 'morhetz/gruvbox'         "gruvbox color theme
+Plugin 'junegunn/fzf'            "https://github.com/junegunn/fzf#as-vim-plugin
+call vundle#end()
+filetype plugin indent on        "required for vundle
+
+
+
+"Swapfile destination"
+set directory^=$HOME/.vim/tmp//
+
+"NERDTree fix https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
+let g:NERDTreeNodeDelimiter = "\u00a0"" 
+"line numbers are good"
+set number
+
+"who doesn't like autoindent"
+set autoindent
+
+"Enables mouse support
+set mouse=a
+
+"colors are good"
+syntax on
+
+"IMO, text wrapping is misleading and gross"
+set nowrap
+set tabstop=2
+
+"Who likes an 8 character tab. Not me!"
+set shiftwidth=4
+
+"Use spaces by default"
+set expandtab
+
+"Ruby convention is 2 spaces"
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype erb setlocal ts=2 sts=2 sw=2
+autocmd Filetype go setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype json setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+
+"Show trailing whitespace"
+set list lcs=tab:\ \ ,trail:~,extends:>,precedes:<
+
+"Makes searching better"
+set ignorecase
+set smartcase "Will use caps if there are caps"
+
+"Use the system clipboard (for linux. Need vim-gnome)"
+set clipboard=unnamedplus
+
+"For mac. Need to install using brew"
+set clipboard=unnamed
+
+"Make backspace work like most other apps"
+set backspace=2
+
+"Tab completion"
+set wildmode=longest,list,full
+set wildmenu
+
+"Default colorscheme"
+let g:gruvbox_invert_selection=0 "Fixes visual mode highlighting. Must come before 'colorscheme gruvbox'"
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+
+let g:ackprg = 'ag --vimgrep'
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l -g ""'
+
+" Eliminate need for ctrl-w
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l

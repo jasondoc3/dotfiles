@@ -1,0 +1,4 @@
+.netrwhirst
+bundle/*
+tmp/
+
