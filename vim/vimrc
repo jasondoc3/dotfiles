@@ -2,7 +2,7 @@ set nocompatible "required for vundle
 filetype off     "required for vundle
 
 "Set the runtime path to include vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/home/vim/bundle/Vundle.vim
 
 " Use fzf"
 set rtp+=/usr/local/opt/fzf
@@ -22,7 +22,7 @@ filetype plugin indent on        "required for vundle
 
 
 "Swapfile destination"
-set directory^=$HOME/.vim/tmp//
+set directory^=$HOME/home/vim/tmp/
 
 "NERDTree fix https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
 let g:NERDTreeNodeDelimiter = "\u00a0"" 

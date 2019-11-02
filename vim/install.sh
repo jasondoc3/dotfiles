@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/jasondoc3/.vim.git ~/.vim
-
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)
@@ -25,11 +23,11 @@ case "${unameOut}" in
 esac
 
 echo 'Installing vundle'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/home/vim/bundle/Vundle.vim
 echo 'Installing plugins'
 echo 'vim - +PluginInstall +qall' | bash
-echo 'Linking vimrc to ~/vim/.vimrc'
-ln -s ~/.vim/vimrc ~/.vimrc
+echo 'Linking vimrc to ~/.vimrc'
+ln -s ~/home/vim/vimrc ~/.vimrc
 echo 'Done!'
 
 exit 0
