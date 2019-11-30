@@ -101,7 +101,7 @@ alias boundports="sudo lsof -i -P -n | grep LISTEN"
 # virtualenvwrapper path
 export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/md/python
+export PROJECT_HOME=$HOME/md
 source /usr/local/bin/virtualenvwrapper.sh
 
 # autojump
