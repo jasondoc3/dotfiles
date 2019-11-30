@@ -1,0 +1,22 @@
+[user]
+	name = Jason Dougherty
+[alias]
+  amend = commit --amend --no-edit
+  at = config user.email
+  bl = blame
+  br = branch
+  brm = branch -D
+  cm = commit -m
+	co = checkout
+  df = diff
+  lg = log
+	purr = pull --rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  st = status
+  whoami = "!whoami() { echo \"`git config --get user.name` <`git config --get user.email`>\"; };whoami"
+
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
+[push]
+  default = current
