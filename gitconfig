@@ -8,6 +8,7 @@
   brm = branch -D
   cm = commit -m
 	co = checkout
+  cob = checkout -b
   df = diff
   lg = log
 	purr = pull --rebase
