@@ -12,6 +12,7 @@
   df = diff
   lg = log
 	purr = pull --rebase
+  pushf = push --force
   rbi = rebase -i
   rbc = rebase --continue
   st = status
