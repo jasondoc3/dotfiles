@@ -13,6 +13,7 @@
   lg = log
 	purr = pull --rebase
   pushf = push --force
+  red = reset HEAD --hard
   rbi = rebase -i
   rbc = rebase --continue
   st = status
