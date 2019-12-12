@@ -15,9 +15,11 @@ Plugin 'scrooloose/nerdtree.git' "directory sidebar
 Plugin 'fatih/vim-go.git'        "go specific vim plugin
 Plugin 'tpope/vim-endwise.git'   "adds 'end' in ruby automatically
 Plugin 'tpope/vim-rails.git'     "adds rails syntax highlighting
-Plugin 'thoughtbout/vim-rspec.git' "adds rspec syntax highlighting
+Plugin 'thoughtbot/vim-rspec'    "adds rspec syntax highlighting
 Plugin 'morhetz/gruvbox'         "gruvbox color theme
 Plugin 'junegunn/fzf'            "https://github.com/junegunn/fzf#as-vim-plugin
+Plugin 'pangloss/vim-javascript' "https://github.com/pangloss/vim-javascript
+Plugin 'MaxMEllon/vim-jsx-pretty'
 call vundle#end()
 filetype plugin indent on        "required for vundle
 
