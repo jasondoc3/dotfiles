@@ -22,11 +22,11 @@ zstyle ':vcs_info:git:*' unstagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' formats '%F{green}%b%u%c%f'
 # https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
-precmd() { 
+precmd() {
     vcs_info
 
     if [[ -z ${vcs_info_msg_0_} ]]; then
-	PS1='%F{cyan}%~%f '
+        PS1='%F{cyan}%~%f '
     else
         PS1='%F{cyan}%~%f ${vcs_info_msg_0_} '
     fi
