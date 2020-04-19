@@ -21,6 +21,7 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' formats '%F{green}%b%u%c%f'
+setopt prompt_subst
 # https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 precmd() {
     vcs_info
