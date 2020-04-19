@@ -57,6 +57,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # aliases
 alias be="bundle exec"
+alias gs="git status"
 alias boundports="sudo lsof -i -P -n | grep LISTEN"
 
 # autojump
