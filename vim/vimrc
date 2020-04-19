@@ -73,7 +73,7 @@ set smartcase "Will use caps if there are caps"
 set clipboard=unnamedplus
 
 "For mac. Need to install using brew"
-set clipboard=unnamed
+"set clipboard=unnamed
 
 "Make backspace work like most other apps"
 set backspace=2
@@ -84,6 +84,7 @@ set wildmenu
 
 "Default colorscheme"
 let g:gruvbox_invert_selection=0 "Fixes visual mode highlighting. Must come before 'colorscheme gruvbox'"
+set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
