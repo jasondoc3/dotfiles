@@ -24,3 +24,5 @@
   ign = ls-files -o -i --exclude-standard
 [push]
   default = current
+[credential]
+	helper = cache --timeout=86400
