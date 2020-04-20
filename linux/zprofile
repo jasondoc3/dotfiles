@@ -1,0 +1,2 @@
+# Console display manager
+bash /usr/bin/tdm --silent
