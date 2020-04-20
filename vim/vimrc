@@ -1,5 +1,6 @@
 set nocompatible "required for vundle
 filetype off     "required for vundle
+let os = system('uname -s')
 
 "Set the runtime path to include vundle and initialize
 set rtp+=~/home/vim/bundle/Vundle.vim
@@ -69,11 +70,13 @@ set list lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 set ignorecase
 set smartcase "Will use caps if there are caps"
 
-"Use the system clipboard (for linux. Need vim-gnome)"
-set clipboard=unnamedplus
-
-"For mac. Need to install using brew"
-"set clipboard=unnamed
+if !(stridx(os, "Linux") == -1)
+    "Use the system clipboard (for linux. Need vim-gnome)"
+    set clipboard=unnamedplus
+elseif !(stridx(os, "Darwin")) == -1
+    "For mac. Need to install using brew
+    set clipboard=unnamed
+endif
 
 "Make backspace work like most other apps"
 set backspace=2
