@@ -58,6 +58,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # aliases
 alias be="bundle exec"
+alias pe="pipenv"
 alias gs="git status"
 alias boundports="sudo lsof -i -P -n | grep LISTEN"
 
@@ -68,11 +69,18 @@ alias boundports="sudo lsof -i -P -n | grep LISTEN"
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+# Pipenv
+export PATH="$PATH:$HOME/.local/bin"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jason/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jason/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jason/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jason/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# chruby
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 
 # Custom stuff per system if needed
 if [ -f ~/.zsh_profile ]; then . ~/.zsh_profile; fi
