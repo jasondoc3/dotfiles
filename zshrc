@@ -74,6 +74,7 @@ source /usr/share/fzf/completion.zsh
 
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
@@ -87,3 +88,6 @@ source /usr/share/chruby/auto.sh
 
 # Custom stuff per system if needed
 if [ -f ~/.zsh_profile ]; then . ~/.zsh_profile; fi
+
+# nvm
+source /usr/share/nvm/init-nvm.sh
