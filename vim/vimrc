@@ -20,11 +20,15 @@ Plugin 'thoughtbot/vim-rspec'    "adds rspec syntax highlighting
 Plugin 'morhetz/gruvbox'         "gruvbox color theme
 Plugin 'junegunn/fzf'            "https://github.com/junegunn/fzf#as-vim-plugin
 Plugin 'pangloss/vim-javascript' "https://github.com/pangloss/vim-javascript
-Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on        "required for vundle
 
-
+" vim-jsx
+"
+" Enable JSX syntax highlighting in .js files
+let g:jsx_ext_required = 0
 
 "Swapfile destination"
 set directory^=$HOME/home/vim/tmp/
@@ -60,6 +64,9 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype go setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascriptreact setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescriptreact setlocal ts=2 sts=2 sw=2
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 
