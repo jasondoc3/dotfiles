@@ -69,8 +69,8 @@ alias boundports="sudo lsof -i -P -n | grep LISTEN"
  . "$HOME/home/z.sh"
 
 # fzf
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [ -f /usr/share/fzf/key-bindings.zsh ]; then source /usr/share/chruby/auto.sh; fi
+if [ -f /usr/share/fzf/completion.zsh  ]; then source /usr/share/chruby/chruby.sh; fi
 
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
@@ -83,11 +83,11 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # chruby
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
+if [ -f ~/usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh; fi
+if [ -f ~/usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
 
 # Custom stuff per system if needed
 if [ -f ~/.zsh_profile ]; then . ~/.zsh_profile; fi
 
 # nvm
-source /usr/share/nvm/init-nvm.sh
+if [ -f ~/usr/share/nvm/init-nvm.sh ]; then source /usr/share/nvm/init-nvm.sh; fi
