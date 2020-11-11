@@ -22,6 +22,7 @@ Plugin 'junegunn/fzf'            "https://github.com/junegunn/fzf#as-vim-plugin
 Plugin 'pangloss/vim-javascript' "https://github.com/pangloss/vim-javascript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'ianks/vim-tsx'
 call vundle#end()
 filetype plugin indent on        "required for vundle
 
