@@ -20,9 +20,9 @@ Plugin 'thoughtbot/vim-rspec'    "adds rspec syntax highlighting
 Plugin 'morhetz/gruvbox'         "gruvbox color theme
 Plugin 'junegunn/fzf'            "https://github.com/junegunn/fzf#as-vim-plugin
 Plugin 'pangloss/vim-javascript' "https://github.com/pangloss/vim-javascript
-Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'ianks/vim-tsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 call vundle#end()
 filetype plugin indent on        "required for vundle
 
