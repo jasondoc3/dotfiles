@@ -70,6 +70,7 @@ autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
 autocmd Filetype typescriptreact setlocal ts=2 sts=2 sw=2
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 "Show trailing whitespace"
 set list lcs=tab:\ \ ,trail:~,extends:>,precedes:<
