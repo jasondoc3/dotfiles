@@ -36,7 +36,11 @@ set directory^=$HOME/home/vim/tmp/
 
 "NERDTree fix https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
 let g:NERDTreeNodeDelimiter = "\u00a0"" 
-"line numbers are good"
+
+"NERDTree helper
+map <C-e> <esc>:NERDTree<CR>
+
+""line numbers are good"
 set number
 
 "who doesn't like autoindent"
