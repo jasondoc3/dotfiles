@@ -10,7 +10,7 @@
 	co = checkout
   cob = checkout -b
   df = diff
-  lg = log
+  lg = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	purr = pull --rebase
   pushf = push --force
   red = reset HEAD --hard
