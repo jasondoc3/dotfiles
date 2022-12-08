@@ -88,7 +88,6 @@ set smartcase "Will use caps if there are caps"
 if !(stridx(os, "Linux") == -1)
     "Use the system clipboard (for linux. Need vim-gnome)"
     set clipboard=unnamedplus
-    autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) . " | awk '{$1=$1};1' | xclip -selection clipboard")
 else
     "For mac. Need to install using brew
     set clipboard=unnamed
