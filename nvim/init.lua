@@ -22,8 +22,6 @@ require("lazy").setup({
   "fatih/vim-go",
   "ntpeters/vim-better-whitespace",
   "folke/tokyonight.nvim",
-  "sainnhe/sonokai",
-  "rafamadriz/neon",
   {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
