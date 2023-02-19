@@ -44,9 +44,6 @@ local handle = io.popen("uname -s")
 local os = handle:read("*a")
 handle:close()
 
--- Swapfile Directory
-set.directory="~/.local/share/nvim/swap/"
-
 -- Display line numbers
 set.number = true
 
