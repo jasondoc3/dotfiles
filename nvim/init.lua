@@ -15,13 +15,13 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Package List
 require("lazy").setup({
-  "ctrlpvim/ctrlp.vim",
   "tpope/vim-endwise",
   "tpope/vim-rails",
   "thoughtbot/vim-rspec",
   "fatih/vim-go",
   "ntpeters/vim-better-whitespace",
   "folke/tokyonight.nvim",
+  "nvim-telescope/telescope.nvim",
   {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -76,6 +76,13 @@ vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {})
 -- Better whitespace plugin configuration
 vim.g['strip_whitespace_on_save'] = 1
 vim.g['strip_whitespace_confirm'] = 0
+
+-- Telescope configuration
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', telescope.find_files, {})
+vim.keymap.set('n', 'fg', telescope.live_grep, {})
+vim.keymap.set('n', 'fb', telescope.buffers, {})
+vim.keymap.set('n', 'fh', telescope.help_tags, {})
 
 -- Colorscheme
 vim.cmd[[colorscheme tokyonight-night]]
