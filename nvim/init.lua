@@ -22,6 +22,12 @@ require("lazy").setup({
   "ntpeters/vim-better-whitespace",
   "folke/tokyonight.nvim",
   "nvim-telescope/telescope.nvim",
+  "ellisonleao/gruvbox.nvim",
+  "Mofiqul/dracula.nvim",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
   {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -55,7 +61,7 @@ set.wrap = false
 set.tabstop = 2
 
 -- Tabs look like 4 spaces instead
-set.shiftwidth = 4
+set.shiftwidth = 2
 
 -- Use spaces by default
 set.expandtab = true
@@ -79,10 +85,30 @@ vim.g['strip_whitespace_confirm'] = 0
 
 -- Telescope configuration
 local telescope = require('telescope.builtin')
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = { "node_modules", "target", },
+    layout_strategy = 'vertical',
+  }
+}
 vim.keymap.set('n', '<C-p>', telescope.find_files, {})
 vim.keymap.set('n', 'fg', telescope.live_grep, {})
 vim.keymap.set('n', 'fb', telescope.buffers, {})
 vim.keymap.set('n', 'fh', telescope.help_tags, {})
+
+-- Treesitter config
+require('nvim-treesitter.configs').setup{
+  ensure_installed = { "c", "lua", "vim", "help" },
+  auto_install = true,
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 
 -- Colorscheme
 vim.cmd[[colorscheme tokyonight-night]]

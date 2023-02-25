@@ -105,3 +105,6 @@ if [ -f ~/.zsh_profile ]; then . ~/.zsh_profile; fi
 
 # nvm
 if [ -f ~/usr/share/nvm/init-nvm.sh ]; then source /usr/share/nvm/init-nvm.sh; fi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
