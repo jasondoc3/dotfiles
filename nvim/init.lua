@@ -90,15 +90,13 @@ vim.g['strip_whitespace_confirm'] = 0
 local telescope = require('telescope.builtin')
 require('telescope').setup{
   defaults = {
-    file_ignore_patterns = { "node_modules", "target", },
+    file_ignore_patterns = { "node_modules", "target", ".git" },
     layout_strategy = 'vertical',
   }
 }
 require("telescope").load_extension "file_browser"
-vim.keymap.set('n', '<C-p>', telescope.find_files, {})
+vim.keymap.set('n', '<C-p>', ":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<CR>", {})
 vim.keymap.set('n', '<C-t>', telescope.live_grep, {})
-vim.keymap.set('n', 'fb', telescope.buffers, {})
-vim.keymap.set('n', 'fh', telescope.help_tags, {})
 vim.keymap.set('n', '<C-e>', ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 
 -- Treesitter config
