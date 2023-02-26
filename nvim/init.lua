@@ -24,6 +24,7 @@ require("lazy").setup({
   "ellisonleao/gruvbox.nvim",
   "Mofiqul/dracula.nvim",
   "nvim-lualine/lualine.nvim",
+  "nathom/filetype.nvim",
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = {
