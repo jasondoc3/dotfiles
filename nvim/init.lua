@@ -28,6 +28,7 @@ require("lazy").setup({
     build = ":TSUpdate",
     dependencies = {
       "RRethy/nvim-treesitter-endwise",
+      "windwp/nvim-ts-autotag",
     }
   },
   {
@@ -101,6 +102,7 @@ vim.keymap.set('n', 'fh', telescope.help_tags, {})
 -- Treesitter config
 require('nvim-treesitter.configs').setup{
   endwise = { enable = true, },
+  autotag = { enable = true, },
   ensure_installed = { "c", "lua", "vim", "help" },
   auto_install = true,
   highlight = {
