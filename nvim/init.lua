@@ -15,7 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Package List
 require("lazy").setup({
-  "tpope/vim-endwise",
   "tpope/vim-rails",
   "thoughtbot/vim-rspec",
   "fatih/vim-go",
@@ -27,6 +26,9 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = {
+      "RRethy/nvim-treesitter-endwise",
+    }
   },
   {
     "windwp/nvim-autopairs",
@@ -98,6 +100,7 @@ vim.keymap.set('n', 'fh', telescope.help_tags, {})
 
 -- Treesitter config
 require('nvim-treesitter.configs').setup{
+  endwise = { enable = true, },
   ensure_installed = { "c", "lua", "vim", "help" },
   auto_install = true,
   highlight = {
