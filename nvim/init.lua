@@ -23,6 +23,7 @@ require("lazy").setup({
   "nvim-telescope/telescope.nvim",
   "ellisonleao/gruvbox.nvim",
   "Mofiqul/dracula.nvim",
+  "nvim-lualine/lualine.nvim",
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -114,6 +115,11 @@ require('nvim-treesitter.configs').setup{
     additional_vim_regex_highlighting = false,
   },
 }
+
+-- Lualine
+require('lualine').setup({
+  theme = 'tokyonight-night'
+})
 
 -- Colorscheme
 vim.cmd[[colorscheme tokyonight-night]]
