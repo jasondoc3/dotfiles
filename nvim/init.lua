@@ -25,6 +25,13 @@ require("lazy").setup({
   "Mofiqul/dracula.nvim",
   "nvim-lualine/lualine.nvim",
   {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    }
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     dependencies = {
@@ -36,14 +43,6 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   },
-  {
-  "nvim-neo-tree/neo-tree.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
-  }
 })
 
 -- CONFIGURATION --
@@ -78,10 +77,10 @@ set.wildmode = "longest,list,full"
 set.wildmenu = true
 
 -- Eliminate the need for CTRL-W when moving panes
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", {})
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", {})
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", {})
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {})
+vim.keymap.set("n", "<C-h>", "<C-w>h", {})
+vim.keymap.set("n", "<C-j>", "<C-w>j", {})
+vim.keymap.set("n", "<C-k>", "<C-w>k", {})
+vim.keymap.set("n", "<C-l>", "<C-w>l", {})
 
 -- Better whitespace plugin configuration
 vim.g['strip_whitespace_on_save'] = 1
@@ -95,10 +94,12 @@ require('telescope').setup{
     layout_strategy = 'vertical',
   }
 }
+require("telescope").load_extension "file_browser"
 vim.keymap.set('n', '<C-p>', telescope.find_files, {})
 vim.keymap.set('n', '<C-t>', telescope.live_grep, {})
 vim.keymap.set('n', 'fb', telescope.buffers, {})
 vim.keymap.set('n', 'fh', telescope.help_tags, {})
+vim.keymap.set('n', '<C-e>', ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 
 -- Treesitter config
 require('nvim-treesitter.configs').setup{
