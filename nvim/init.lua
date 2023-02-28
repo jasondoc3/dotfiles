@@ -148,7 +148,10 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.rubocop.with({
 			command = "bundle",
-			args = vim.list_extend({ "exec", "rubocop", "--server" }, null_ls.builtins.formatting.rubocop._opts.args),
+			args = vim.list_extend(
+				{ "exec", "rubocop", "--server", "-A", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" },
+				{}
+			),
 		}),
 	},
 	on_attach = function(client, bufnr)
