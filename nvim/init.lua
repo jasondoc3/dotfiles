@@ -25,6 +25,19 @@ require("lazy").setup({
 	"nvim-lualine/lualine.nvim",
 	"nathom/filetype.nvim",
 	"mhartington/formatter.nvim",
+	"neovim/nvim-lspconfig",
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
+		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
+	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = {
@@ -79,6 +92,9 @@ set.clipboard = "unnamed,unnamedplus"
 set.wildmode = "longest,list,full"
 set.wildmenu = true
 
+-- Colorscheme
+vim.cmd([[colorscheme tokyonight-night]])
+
 -- Eliminate the need for CTRL-W when moving panes
 vim.keymap.set("n", "<C-h>", "<C-w>h", {})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {})
@@ -97,7 +113,7 @@ require("telescope").load_extension("file_browser")
 vim.keymap.set(
 	"n",
 	"<C-p>",
-	":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<CR>",
+	":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍 <CR>",
 	{}
 )
 vim.keymap.set("n", "<C-t>", telescope.live_grep, {})
@@ -125,13 +141,13 @@ require("lualine").setup({
 })
 
 -- Formatter configuration
+--[[
 vim.cmd([[
   augroup FormatAutogroup
     autocmd!
     autocmd BufWritePost * FormatWriteLock
   augroup END
-]])
-
+)
 local formatter_util = require("formatter.util")
 require("formatter").setup({
 	logging = true,
@@ -163,6 +179,36 @@ require("formatter").setup({
 		},
 	},
 })
+]]
 
--- Colorscheme
-vim.cmd([[colorscheme tokyonight-night]])
+-- Null LS
+local null_ls = require("null-ls")
+local lspformatting = vim.api.nvim_create_augroup("LspFormatting", {})
+null_ls.setup({
+	debug = true,
+	sources = {
+		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.rubocop.with({
+			command = "bundle",
+			args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.formatting.rubocop._opts.args),
+		}),
+	},
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = lspformatting, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = lspformatting,
+				buffer = bufnr,
+				callback = function()
+					-- vim.lsp.buf.formatting_sync()
+					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+					vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 10000 })
+				end,
+			})
+		end
+	end,
+})
+
+-- Mason Configuration
+require("mason").setup()
+require("mason-lspconfig").setup()
