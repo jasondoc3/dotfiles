@@ -24,7 +24,6 @@ require("lazy").setup({
 	"Mofiqul/dracula.nvim",
 	"nvim-lualine/lualine.nvim",
 	"nathom/filetype.nvim",
-	"mhartington/formatter.nvim",
 	"neovim/nvim-lspconfig",
 	{
 		"jose-elias-alvarez/null-ls.nvim",
@@ -140,47 +139,6 @@ require("lualine").setup({
 	theme = "tokyonight-night",
 })
 
--- Formatter configuration
---[[
-vim.cmd([[
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost * FormatWriteLock
-  augroup END
-)
-local formatter_util = require("formatter.util")
-require("formatter").setup({
-	logging = true,
-	log_level = vim.log.levels.WARN,
-	filetype = {
-		lua = {
-			require("formatter.filetypes.lua").stylua,
-		},
-
-		ruby = {
-			function()
-				return {
-					exe = "rubocop",
-					args = {
-						"--autocorrect-all",
-						"--stdin",
-						formatter_util.escape_path(formatter_util.get_current_buffer_file_name()),
-						"--format files",
-						"| awk 'f; /^====================$/{f=1}'",
-					},
-					stdin = true,
-				}
-			end,
-		},
-
-		-- Any filetype
-		["*"] = {
-			require("formatter.filetypes.any").remove_trailing_whitespace,
-		},
-	},
-})
-]]
-
 -- Null LS
 local null_ls = require("null-ls")
 local lspformatting = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -190,7 +148,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.rubocop.with({
 			command = "bundle",
-			args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.formatting.rubocop._opts.args),
+			args = vim.list_extend({ "exec", "rubocop", "--server" }, null_ls.builtins.formatting.rubocop._opts.args),
 		}),
 	},
 	on_attach = function(client, bufnr)
