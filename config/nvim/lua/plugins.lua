@@ -4,8 +4,6 @@ return {
 	"nathom/filetype.nvim",
 	"neovim/nvim-lspconfig", -- TODO: Is this needed?
 	"nvim-lualine/lualine.nvim",
-	"tpope/vim-rails",
-	"thoughtbot/vim-rspec",
 	{
 		"williamboman/mason.nvim",
 		dependencies = {
