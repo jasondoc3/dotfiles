@@ -1,4 +1,5 @@
-# home
-My home directory
+# Home
 
-Contains vim, tmux, and zsh configurations
+My home directory and dotfiles
+
+Contains nvim, tmux, and zsh configurations
