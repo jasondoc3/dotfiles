@@ -19,7 +19,3 @@ Contains git, nvim, tmux, and zsh configurations
   ln -sf ~/home/zshrc ~/.zshrc
   ln -sf ~/home/gitconfig ~/.gitconfig
   ```
-
-# Neovim
-
-My neovim setup
