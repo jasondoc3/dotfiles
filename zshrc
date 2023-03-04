@@ -57,7 +57,7 @@ alias la='ls -a'
 
 # Environment
 export BROWSER="chromium"
-export EDITOR="vim"
+export EDITOR="nvim"
 export PAGER="less"
 
 # Rehash automactially
@@ -101,7 +101,7 @@ if [ -f ~/usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh;
 if [ -f ~/usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
 
 # Custom stuff per system if needed
-if [ -f ~/.zsh_profile ]; then . ~/.zsh_profile; fi
+if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
 
 # nvm
 if [ -f ~/usr/share/nvm/init-nvm.sh ]; then source /usr/share/nvm/init-nvm.sh; fi
