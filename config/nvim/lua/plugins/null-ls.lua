@@ -8,10 +8,28 @@ return {
 			local null_ls = require("null-ls")
 			local lspformatting = vim.api.nvim_create_augroup("LspFormatting", {})
 			null_ls.setup({
-				debug = true,
 				sources = {
 					null_ls.builtins.formatting.markdownlint,
 					null_ls.builtins.formatting.stylua,
+					null_ls.builtins.formatting.gofmt,
+					null_ls.builtins.diagnostics.rubocop.with({
+						command = "bundle",
+						args = vim.list_extend(
+							{
+								"exec",
+								"rubocop",
+								"--server",
+								"--cache-root",
+								"$HOME/.cache/rubocop_diagnostics_cache/",
+								"-f",
+								"json",
+								"--force-exclusion",
+								"--stdin",
+								"$FILENAME",
+							},
+							{}
+						),
+					}),
 					null_ls.builtins.formatting.rubocop.with({
 						command = "bundle",
 						args = vim.list_extend(
