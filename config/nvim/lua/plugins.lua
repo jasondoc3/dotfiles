@@ -1,7 +1,7 @@
 return {
 	"folke/tokyonight.nvim",
 	"nathom/filetype.nvim",
-	"neovim/nvim-lspconfig", -- TODO: Is this needed?
+	"neovim/nvim-lspconfig",
 	"nvim-lualine/lualine.nvim",
 	{
 		"windwp/nvim-autopairs",
