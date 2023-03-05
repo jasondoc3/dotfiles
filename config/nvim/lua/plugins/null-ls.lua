@@ -9,26 +9,26 @@ return {
 			local lspformatting = vim.api.nvim_create_augroup("LspFormatting", {})
 			null_ls.setup({
 				sources = {
+					null_ls.builtins.formatting.trim_whitespace,
+					null_ls.builtins.formatting.trim_newlines,
 					null_ls.builtins.formatting.markdownlint,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.gofmt,
+					null_ls.builtins.formatting.goimports,
 					null_ls.builtins.diagnostics.rubocop.with({
 						command = "bundle",
-						args = vim.list_extend(
-							{
-								"exec",
-								"rubocop",
-								"--server",
-								"--cache-root",
-								"$HOME/.cache/rubocop_diagnostics_cache/",
-								"-f",
-								"json",
-								"--force-exclusion",
-								"--stdin",
-								"$FILENAME",
-							},
-							{}
-						),
+						args = vim.list_extend({
+							"exec",
+							"rubocop",
+							"--server",
+							"--cache-root",
+							"$HOME/.cache/rubocop_diagnostics_cache/",
+							"-f",
+							"json",
+							"--force-exclusion",
+							"--stdin",
+							"$FILENAME",
+						}, {}),
 					}),
 					null_ls.builtins.formatting.rubocop.with({
 						command = "bundle",
