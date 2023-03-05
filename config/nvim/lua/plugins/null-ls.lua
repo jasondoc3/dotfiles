@@ -23,7 +23,7 @@ return {
 							"rubocop",
 							"--server",
 							"--cache-root",
-							"$HOME/.cache/rubocop_diagnostics_cache/",
+							"~/.cache/rubocop_diagnostics_cache/",
 							"-f",
 							"json",
 							"--force-exclusion",
