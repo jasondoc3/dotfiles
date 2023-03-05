@@ -23,7 +23,7 @@ return {
 				{}
 			)
 
-			vim.keymap.set("n", "<C-t>", telescope.live_grep, {})
+			vim.keymap.set("n", "<C-s>", telescope.live_grep, {})
 			vim.keymap.set(
 				"n",
 				"<C-e>",
