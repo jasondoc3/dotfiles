@@ -35,6 +35,17 @@ return {
 					},
 				},
 			})
+
+			-- Ruby lsp support
+			-- Need to install solargraph rails
+			lspconfig.solargraph.setup({
+				settings = {
+					solargraph = {
+						diagnostics = false, -- Handled by null-ls
+						formatting = false, -- Hanlded by null-ls
+					},
+				},
+			})
 		end,
 	},
 }
