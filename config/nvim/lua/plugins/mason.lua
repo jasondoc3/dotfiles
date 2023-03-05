@@ -2,7 +2,9 @@ return {
 	{
 		"williamboman/mason.nvim",
 		dependencies = {
+			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim",
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
 			require("mason").setup()
@@ -34,9 +36,13 @@ return {
 				-- end, bufopts)
 			end
 
+			-- Use autocomplete for nvim-
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 			-- GoPls LSP support
 			lspconfig.gopls.setup({
 				on_attach = on_attach,
+				capabilities = capabilities,
 				settings = {
 					gopls = {
 						analyses = {
