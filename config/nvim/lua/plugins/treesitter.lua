@@ -10,7 +10,7 @@ return {
 			require("nvim-treesitter.configs").setup({
 				endwise = { enable = true },
 				autotag = { enable = true },
-				ensure_installed = { "c", "lua", "vim", "help" },
+				ensure_installed = { "c", "lua", "vim", "help", "markdown", "markdown_inline" },
 				auto_install = true,
 				highlight = {
 					enable = true,
