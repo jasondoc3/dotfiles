@@ -9,7 +9,17 @@ return {
 			require("mason-lspconfig").setup()
 
 			-- GoPls LSP support
-			require("lspconfig").gopls.setup({})
+			require("lspconfig").gopls.setup({
+				settings = {
+					gopls = {
+						analyses = {
+							unusedparams = true,
+							unreachable = true,
+							unusedvariable = true,
+						},
+					},
+				},
+			})
 		end,
 	},
 }
