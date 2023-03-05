@@ -12,6 +12,7 @@ return {
 					null_ls.builtins.formatting.trim_whitespace,
 					null_ls.builtins.formatting.trim_newlines,
 					null_ls.builtins.formatting.markdownlint,
+					null_ls.builtins.diagnostics.markdownlint,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.gofmt,
 					null_ls.builtins.formatting.goimports,
