@@ -21,7 +21,7 @@ return {
 						args = vim.list_extend({
 							"exec",
 							"rubocop",
-							"--server",
+							--							"--server", The server arg is causing issues for diagnostics
 							"--cache-root",
 							"~/.cache/rubocop_diagnostics_cache/",
 							"--format",
@@ -33,20 +33,17 @@ return {
 					}),
 					null_ls.builtins.formatting.rubocop.with({
 						command = "bundle",
-						args = vim.list_extend(
-							{
-								"exec",
-								"rubocop",
-								"--server",
-								"-A",
-								"--format",
-								"quiet",
-								"--stderr",
-								"--stdin",
-								"$FILENAME",
-							},
-							{}
-						),
+						args = vim.list_extend({
+							"exec",
+							"rubocop",
+							"--server",
+							"-A",
+							"--format",
+							"quiet",
+							"--stderr",
+							"--stdin",
+							"$FILENAME",
+						}, {}),
 					}),
 				},
 				on_attach = function(client, bufnr)
