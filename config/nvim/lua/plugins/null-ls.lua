@@ -24,7 +24,7 @@ return {
 							"--server",
 							"--cache-root",
 							"~/.cache/rubocop_diagnostics_cache/",
-							"-f",
+							"--format",
 							"json",
 							"--force-exclusion",
 							"--stdin",
@@ -34,7 +34,17 @@ return {
 					null_ls.builtins.formatting.rubocop.with({
 						command = "bundle",
 						args = vim.list_extend(
-							{ "exec", "rubocop", "--server", "-A", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" },
+							{
+								"exec",
+								"rubocop",
+								"--server",
+								"-A",
+								"--format",
+								"quiet",
+								"--stderr",
+								"--stdin",
+								"$FILENAME",
+							},
 							{}
 						),
 					}),
