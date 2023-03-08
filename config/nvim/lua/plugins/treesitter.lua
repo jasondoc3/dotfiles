@@ -12,6 +12,9 @@ return {
 				autotag = { enable = true },
 				ensure_installed = { "c", "lua", "vim", "help", "markdown", "markdown_inline" },
 				auto_install = true,
+				indent = {
+					enable = true,
+				},
 				highlight = {
 					enable = true,
 					-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
