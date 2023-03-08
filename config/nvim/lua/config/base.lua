@@ -5,7 +5,14 @@ local set = vim.opt
 set.number = true
 
 -- Autoindent
+set.smartindent = true
 set.autoindent = true
+
+-- Fix indent bug with treesitter in ruby
+-- See https://github.com/nvim-treesitter/nvim-treesitter/issues/3363
+vim.cmd([[
+  autocmd Filetype ruby setlocal indentkeys-=.
+]])
 
 -- Don't wrap text
 set.wrap = false
