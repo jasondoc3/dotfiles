@@ -8,6 +8,7 @@ return {
 			local null_ls = require("null-ls")
 			local lspformatting = vim.api.nvim_create_augroup("LspFormatting", {})
 			null_ls.setup({
+				debounce = 2000,
 				sources = {
 					null_ls.builtins.formatting.trim_whitespace,
 					null_ls.builtins.formatting.trim_newlines,
