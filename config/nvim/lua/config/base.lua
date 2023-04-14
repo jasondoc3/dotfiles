@@ -34,6 +34,8 @@ set.wildmenu = true
 -- Case insensitive search
 set.ignorecase = true
 
+set.signcolumn = "yes"
+
 -- Eliminate the need for CTRL-W when moving panes
 vim.keymap.set("n", "<C-h>", "<C-w>h", {})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {})
