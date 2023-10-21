@@ -4,7 +4,35 @@ return {
 		build = ":TSUpdate",
 		dependencies = {
 			"RRethy/nvim-treesitter-endwise",
-			"windwp/nvim-ts-autotag",
+			{
+				"windwp/nvim-ts-autotag",
+				config = function()
+					require("nvim-ts-autotag").setup({
+						filetypes = {
+							"erb",
+							"embedded_template",
+							"eruby",
+							"html",
+							"javascript",
+							"typescript",
+							"javascriptreact",
+							"typescriptreact",
+							"svelte",
+							"vue",
+							"tsx",
+							"jsx",
+							"rescript",
+							"xml",
+							"php",
+							"markdown",
+							"astro",
+							"glimmer",
+							"handlebars",
+							"hbs",
+						},
+					})
+				end,
+			},
 		},
 		config = function()
 			require("nvim-treesitter.configs").setup({
