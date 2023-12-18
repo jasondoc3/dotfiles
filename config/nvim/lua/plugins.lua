@@ -1,4 +1,5 @@
-return {
+return 
+{
 	"folke/tokyonight.nvim",
 	"nvim-lualine/lualine.nvim",
 	{
