@@ -25,10 +25,10 @@ zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:git:*' stagedstr '%F{green}*%f'
-zstyle ':vcs_info:git:*' formats '%F{yellow}%b%u%c%f'
+zstyle ':vcs_info:git:*' formats '%F{#bb9af7}%b%u%c%f'
 zstyle ':vcs_info:git-svn:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:git-svn:*' stagedstr '%F{green}*%f'
-zstyle ':vcs_info:git-svn:*' formats '%F{yellow}%b%u%c%f'
+zstyle ':vcs_info:git-svn:*' formats '%F{#bb9af7}%b%u%c%f'
 # https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 precmd() {
     vcs_info
