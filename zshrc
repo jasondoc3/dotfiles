@@ -24,19 +24,19 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '%F{red}*%f'
-zstyle ':vcs_info:git:*' stagedstr '%F{green}*%f'
+zstyle ':vcs_info:git:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' formats '%F{#bb9af7}%b%u%c%f'
 zstyle ':vcs_info:git-svn:*' unstagedstr '%F{red}*%f'
-zstyle ':vcs_info:git-svn:*' stagedstr '%F{green}*%f'
+zstyle ':vcs_info:git-svn:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git-svn:*' formats '%F{#bb9af7}%b%u%c%f'
 # https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 precmd() {
     vcs_info
 
     if [[ -z ${vcs_info_msg_0_} ]]; then
-        PS1='%F{cyan}%~%f '
+        PS1='%F{cyan}%~%f %F{green}❯%f '
     else
-        PS1='%F{cyan}%~%f ${vcs_info_msg_0_} '
+        PS1='%F{cyan}%~%f ${vcs_info_msg_0_} %F{green}❯%f '
     fi
 }
 
