@@ -13,6 +13,7 @@ SAVEHIST=10000
 setopt share_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
+setopt inc_append_history
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
