@@ -47,6 +47,7 @@ return {
 
 			lspconfig.rubocop.setup({
 				on_attach = on_attach,
+				cmd = { "bundle", "exec", "rubocop", "--lsp" },
 				init_options = {
 					safeAutocorrect = false,
 				},
