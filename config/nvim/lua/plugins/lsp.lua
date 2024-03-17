@@ -37,10 +37,12 @@ return {
 
 			-- Need to install solargraph rails too
 			lspconfig.solargraph.setup({
+				init_options = {
+					formatting = false, -- Hanlded by rubocop lsp
+				},
 				settings = {
 					solargraph = {
 						diagnostics = false, -- Handled by rubocop lsp
-						formatting = false, -- Hanlded by rubocop lsp
 					},
 				},
 			})
