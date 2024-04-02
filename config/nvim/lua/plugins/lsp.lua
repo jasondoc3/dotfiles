@@ -42,6 +42,7 @@ return {
 					pylsp = {
 						plugins = {
 							black = { enabled = true },
+							pyslp_mypy = { enabled = true },
 						},
 					},
 				},
