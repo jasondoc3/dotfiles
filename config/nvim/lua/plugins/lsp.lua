@@ -35,6 +35,18 @@ return {
 				},
 			})
 
+			-- python lsp server
+			lspconfig.pylsp.setup({
+				on_attach = on_attach,
+				settings = {
+					pylsp = {
+						plugins = {
+							black = { enabled = true },
+						},
+					},
+				},
+			})
+
 			-- Need to install solargraph rails too
 			lspconfig.solargraph.setup({
 				init_options = {
