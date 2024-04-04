@@ -2,7 +2,8 @@ return {
 	"stevearc/conform.nvim",
 	opts = {},
 	config = function()
-		require("conform").setup({
+		conform = require("conform")
+		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
@@ -14,5 +15,9 @@ return {
 				lsp_fallback = true,
 			},
 		})
+
+		conform.formatters.jq = {
+			prepend_args = { "--indent", "4" },
+		}
 	end,
 }
