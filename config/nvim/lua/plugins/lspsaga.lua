@@ -16,7 +16,7 @@ return {
 			-- If there is no definition, it will instead be hidden
 			-- When you use an action in finder like "open vsplit",
 			-- you can use <C-t> to jump back
-			keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+			keymap("n", "gh", "<cmd>Lspsaga finder<CR>")
 			-- Peek definition
 			-- You can edit the file containing the definition in the floating window
 			-- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
