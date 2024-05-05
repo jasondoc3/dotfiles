@@ -1,5 +1,5 @@
-return 
-{
+return {
+	"github/copilot.vim",
 	"folke/tokyonight.nvim",
 	"nvim-lualine/lualine.nvim",
 	{
