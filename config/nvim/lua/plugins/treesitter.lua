@@ -43,9 +43,10 @@ return {
 				-- Indentation is wonky for ruby and golang. Disabling for now, relying on set autoindent
 				-- Note that additional_vim_regex_highlighting needs to be true
 				--
-				-- indent = {
-				--		enable = true,
-				--		},
+				indent = {
+					enable = true,
+					disable = { "ruby", "go", "golang" },
+				},
 				highlight = {
 					enable = true,
 					-- Setting this to true will run `:h syntax` and tree-sitter at the same time.

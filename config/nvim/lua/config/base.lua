@@ -5,7 +5,7 @@ local set = vim.opt
 set.number = true
 
 -- Autoindent
-set.smartindent = true
+-- set.smartindent = true
 set.autoindent = true
 
 -- Fix indent bug with treesitter in ruby
