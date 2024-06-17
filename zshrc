@@ -78,6 +78,7 @@ alias pe="pipenv"
 alias gs="git status"
 alias boundports="sudo lsof -i -P -n | grep LISTEN"
 alias nv="nvim"
+alias gcs="gsutil"
 
 # autojump
  . "$HOME/home/z.sh"
