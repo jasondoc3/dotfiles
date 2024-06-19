@@ -5,7 +5,7 @@ return {
 		conform = require("conform")
 		conform.setup({
 			formatters_by_ft = {
-				python = { "isort" },
+				-- python = { "black", "isort" }, Handled by LSP
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				json = { "jq" },

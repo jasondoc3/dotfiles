@@ -43,6 +43,7 @@ return {
 						plugins = {
 							black = { enabled = true },
 							pyslp_mypy = { enabled = true },
+							isort = { enabled = true },
 						},
 					},
 				},
