@@ -19,4 +19,5 @@ Contains git, nvim, tmux, and zsh configurations
   ln -sf ~/home/zshrc ~/.zshrc
   ln -sf ~/home/gitconfig ~/.gitconfig
   ln -sf ~/home/config/kitty ~/.config
+  ln -sf ~/home/config/zellij/* ~/.config/zellij/
   ```

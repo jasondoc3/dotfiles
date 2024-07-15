@@ -1,0 +1,13 @@
+keybinds {
+    unbind "Ctrl q"
+    normal {
+        unbind "Ctrl h"
+    }
+    search {
+        unbind "Ctrl h"
+    }
+    pane {
+        bind "-" { Resize "Decrease"; }
+        bind "+" { Resize "Increase"; }
+    }
+}

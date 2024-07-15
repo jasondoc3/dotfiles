@@ -1,3 +1,6 @@
+-- Basic Configuration
+require("config.base")
+
 -- PLUGINS --
 -- Use the lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -13,7 +16,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
-
--- Basic Configuration
-require("config.base")
 require("config.colors")
