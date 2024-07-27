@@ -11,3 +11,5 @@ keybinds {
         bind "+" { Resize "Increase"; }
     }
 }
+
+theme "tokyo-night"
