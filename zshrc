@@ -92,10 +92,6 @@ alias gcs="gsutil"
 # autojump
  . "$HOME/home/z.sh"
 
-# fzf
-if [ -f /usr/share/fzf/key-bindings.zsh ]; then source /usr/share/chruby/auto.sh; fi
-if [ -f /usr/share/fzf/completion.zsh  ]; then source /usr/share/chruby/chruby.sh; fi
-
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
@@ -108,8 +104,8 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 export CLOUDSDK_PYTHON=/usr/bin/python3
 
 # chruby
-if [ -f ~/usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh; fi
-if [ -f ~/usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
+if [ -f /usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh; fi
+if [ -f /usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
 
 # Custom stuff per system if needed
 if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
