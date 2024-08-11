@@ -9,6 +9,10 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				json = { "jq" },
+				typescript = { "prettier" },
+				javascript = { "prettier" },
+				typescriptreact = { "prettier" },
+				javascriptreact = { "prettier" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
@@ -18,7 +22,7 @@ return {
 		})
 
 		conform.formatters.jq = {
-			prepend_args = { "--indent", "4" },
+			prepend_args = { "--indent", "2" },
 		}
 	end,
 }
