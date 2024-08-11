@@ -13,6 +13,7 @@ return {
 				javascript = { "prettier" },
 				typescriptreact = { "prettier" },
 				javascriptreact = { "prettier" },
+				eruby = { "erb_format" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
