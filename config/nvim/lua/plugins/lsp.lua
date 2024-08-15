@@ -25,6 +25,9 @@ return {
 			-- Use autocomplete for nvim-
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			-- JSON
+			lspconfig.jsonls.setup({})
+
 			-- GoPls LSP support
 			lspconfig.gopls.setup({
 				on_attach = on_attach,
