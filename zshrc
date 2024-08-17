@@ -91,7 +91,7 @@ alias nv="nvim"
 alias gcs="gsutil"
 
 # autojump
- . "$HOME/home/z.sh"
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
