@@ -20,17 +20,17 @@ create_symlink() {
   local target="$2"
 
   if [ -e "$target" ]; then
-    echo -e "Removing existing ${RED}$target${NC}"
+    printf "${RED}%-10s${NC} %s\n" "Removed" "$target"
     rm -rf "$target"
   fi
 
-  ln -s $path $target
-  echo -e "Created symlink ${BLUE}$path -> $target${NC}"
+  ln -s "$path" "$target"
+  printf "${BLUE}%-10s${NC} %s\n" "Linked" "$path -> $target" 
 }
 
 echo "Installing dotfiles..."
 mkdir -p $HOME/.config
-echo -e "Created ${BLUE}\"$HOME/.config\"${NC} directory if it did not exist"
+printf "${GREEN}%-10s${NC} %s\n" "Created" "$HOME/.config" 
 
 for config in "nvim" "zellij" "kitty"; do
   create_symlink "$SCRIPT_DIR/$config" "$HOME/.config/$config"
