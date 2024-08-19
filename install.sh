@@ -32,12 +32,14 @@ echo "Installing dotfiles..."
 mkdir -p $HOME/.config
 printf "${GREEN}%-10s${NC} %s\n" "Created" "$HOME/.config" 
 
-for config in "nvim" "zellij" "kitty"; do
+for config in "bat" "nvim" "zellij" "kitty"; do
   create_symlink "$SCRIPT_DIR/$config" "$HOME/.config/$config"
 done
 
 for file in "zshrc" "gitconfig"; do
   create_symlink "$SCRIPT_DIR/$file" "$HOME/.$file"
 done
+
+bat cache --build > /dev/null
 
 echo -e "${GREEN}All done${NC}"

@@ -63,6 +63,14 @@ ls() {
   fi
 }
 
+cat() {
+  if which bat > /dev/null 2>&1; then
+    bat "$@"
+  else
+    command cat "$@"
+  fi
+}
+
 alias ll='ls -lh'
 alias la='ls -a'
 
