@@ -100,6 +100,7 @@ alias gcs="gsutil"
 
 # autojump
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+[[ -r "/opt/homebrew/etc/profile.d/z.sh" ]] && source /opt/homebrew/etc/profile.d/z.sh
 
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
