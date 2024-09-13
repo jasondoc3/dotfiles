@@ -19,7 +19,7 @@ getting an "all in one" install script just hasn't been worth the squeeze 🍊
 - [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [chruby](https://github.com/postmodern/chruby)
-- [z](https://github.com/rupa/z)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ### Install Script
 

@@ -63,6 +63,9 @@ ls() {
   fi
 }
 
+alias ll='ls -lh'
+alias la='ls -a'
+
 cat() {
   if which bat > /dev/null 2>&1; then
     bat "$@"
@@ -71,8 +74,18 @@ cat() {
   fi
 }
 
-alias ll='ls -lh'
-alias la='ls -a'
+# cd and autojump using zoxide
+if which zoxide > /dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
+cd() {
+  if which zoxide > /dev/null 2>&1; then
+    z "$@"
+  else
+    command cd "$@"
+  fi
+}
 
 # Environment
 export BROWSER="chromium"
@@ -97,10 +110,6 @@ alias gs="git status"
 alias boundports="sudo lsof -i -P -n | grep LISTEN"
 alias nv="nvim"
 alias gcs="gsutil"
-
-# autojump
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-[[ -r "/opt/homebrew/etc/profile.d/z.sh" ]] && source /opt/homebrew/etc/profile.d/z.sh
 
 # Pipenv
 export PATH="$PATH:$HOME/.local/bin"
