@@ -111,7 +111,7 @@ alias boundports="sudo lsof -i -P -n | grep LISTEN"
 alias nv="nvim"
 alias gcs="gsutil"
 
-# Pipenv
+# Go
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
