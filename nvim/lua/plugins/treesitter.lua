@@ -37,7 +37,7 @@ return {
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				endwise = { enable = true },
-				ensure_installed = { "c", "lua", "vim", "help", "markdown", "markdown_inline" },
+				ensure_installed = { "c", "lua", "vim", "markdown", "markdown_inline" },
 				auto_install = true,
 				-- Indentation is wonky for ruby and golang. Disabling for now, relying on set autoindent
 				-- Note that additional_vim_regex_highlighting needs to be true
