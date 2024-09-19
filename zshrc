@@ -83,7 +83,7 @@ cd() {
   if which zoxide > /dev/null 2>&1; then
     z "$@"
   else
-    command cd "$@"
+    builtin cd "$@"
   fi
 }
 
