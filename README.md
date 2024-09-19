@@ -18,7 +18,7 @@ getting an "all in one" install script just hasn't been worth the squeeze 🍊
 - [bat](https://github.com/sharkdp/bat)
 - [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [chruby](https://github.com/postmodern/chruby)
+- [mise](https://mise.jdx.dev)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ### Install Script

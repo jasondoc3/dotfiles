@@ -115,13 +115,6 @@ alias gcs="gsutil"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-export CLOUDSDK_PYTHON=/usr/bin/python3
-
 # chruby
 if [ -f /usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh; fi
 if [ -f /usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
@@ -129,8 +122,10 @@ if [ -f /usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
 # Custom stuff per system if needed
 if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
 
-# nvm
-if [ -f ~/usr/share/nvm/init-nvm.sh ]; then source /usr/share/nvm/init-nvm.sh; fi
+# mise
+if which mise > /dev/null; then
+  eval "$(mise activate zsh)"
+fi
 
 # Generated for envman. Do not edit.
 if which pyenv > /dev/null 2>&1; then
