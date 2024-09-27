@@ -1,4 +1,5 @@
 keybinds {
+    unbind "Ctrl q"
     normal {
         unbind "Ctrl h"
     }
