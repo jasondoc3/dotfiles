@@ -44,6 +44,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", {})
 
 -- Set leader key
 vim.g.mapleader = ","
+vim.g.maplocalleader = "/"
 
 -- Don't show mode information
 -- Let lualine handle this
