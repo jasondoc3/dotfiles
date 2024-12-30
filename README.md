@@ -2,7 +2,7 @@
 
 These are my dotfiles 📁
 
-Also houses my neovim, kitty, and zellij configurations.
+Also houses my neovim, ghostty, and zellij configurations.
 
 ## Installation
 
@@ -12,7 +12,7 @@ getting completely up and running. I would normally add this step to the install
 back and forth between MacOS and different distros of linux. My environment is also pretty simple, and
 getting an "all in one" install script just hasn't been worth the squeeze 🍊
 
-- [kitty](https://github.com/kovidgoyal/kitty)
+- [ghostty](https://ghostty.org)
 - [neovim](https://github.com/neovim/neovim)
 - [zellij](https://github.com/zellij-org/zellij)
 - [bat](https://github.com/sharkdp/bat)

@@ -32,7 +32,7 @@ echo "Installing dotfiles..."
 mkdir -p $HOME/.config
 printf "${GREEN}%-10s${NC} %s\n" "Created" "$HOME/.config" 
 
-for config in "bat" "nvim" "zellij" "kitty"; do
+for config in "bat" "nvim" "zellij" "ghostty"; do
   create_symlink "$SCRIPT_DIR/$config" "$HOME/.config/$config"
 done
 
