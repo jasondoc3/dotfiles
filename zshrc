@@ -115,10 +115,6 @@ alias gcs="gsutil"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
-# chruby
-if [ -f /usr/share/chruby/chruby.sh ]; then source /usr/share/chruby/chruby.sh; fi
-if [ -f /usr/share/chruby/auto.sh ]; then source /usr/share/chruby/auto.sh; fi
-
 # Custom stuff per system if needed
 if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
 
