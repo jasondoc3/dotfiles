@@ -18,6 +18,18 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# Rehash automactially
+zstyle ':completion:*' rehash true
+
+# Better history searching with arrow keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
+
 # Prompt
 setopt prompt_subst
 autoload -Uz vcs_info
@@ -87,21 +99,16 @@ cd() {
   fi
 }
 
+# atuin for shell history
+if which atuin > /dev/null 2>&1; then
+  . "$HOME/.atuin/bin/env"
+  eval "$(atuin init zsh)"
+fi
+
 # Environment
 export BROWSER="chromium"
 export EDITOR="nvim"
 export PAGER="less"
-
-# Rehash automactially
-zstyle ':completion:*' rehash true
-
-# Better history searching with arrow keys
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
 
 # aliases
 alias be="bundle exec"
@@ -126,7 +133,7 @@ fi
 # Generated for envman. Do not edit.
 if which pyenv > /dev/null 2>&1; then
   [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-  export PYENV_ROOT="$HOME/.pyenv"
+  exporitomt PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi

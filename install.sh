@@ -41,5 +41,6 @@ for file in "zshrc" "gitconfig"; do
 done
 
 bat cache --build > /dev/null
+atuin import auto
 
 echo -e "${GREEN}All done${NC}"

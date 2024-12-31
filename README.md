@@ -20,6 +20,7 @@ getting an "all in one" install script just hasn't been worth the squeeze 🍊
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [mise](https://mise.jdx.dev)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [atuin](https://github.com/atuinsh/atuin)
 
 ### Install Script
 
