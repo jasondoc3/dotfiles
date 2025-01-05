@@ -1,63 +1,122 @@
-# The following lines were added by compinstall
+# Keybindings
+# -----------
+# Use Emacs-style keybindings (default behavior in Zsh).
+bindkey -e
 
+# Environment
+# -----------
+export BROWSER="chromium"
+export EDITOR="nvim"
+export PAGER="less"
+
+# Zsh Completion System Configuration
+# -----------------------------------
+# This section initializes and configures the autocompletion system.
+autoload -Uz compinit       # Load the `compinit` function for autocompletion.
+compinit                    # Initialize autocompletion.
+
+# Configure completion behavior:
+# - `_expand`: Expands aliases, parameters, etc.
+# - `_complete`: Standard autocompletion.
+# - `_ignored`: Include ignored patterns in completion.
+# - `_correct`: Suggest corrections for typos.
+# - `_approximate`: Allow fuzzy matching.
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle :compinstall filename '/home/jason/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
-setopt share_history
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt inc_append_history
-unsetopt beep
-bindkey -e
-# End of lines configured by zsh-newuser-install
+# Ensures that new commands are available for completion without restarting zsh
+zstyle ':completion:*' rehash true 
 
-# Rehash automactially
-zstyle ':completion:*' rehash true
+## History Configuration
+# ----------------------
 
-# Better history searching with arrow keys
+# Settings to control command history behavior.
+HISTFILE=~/.histfile        # Location of the history file.
+HISTSIZE=10000              # Maximum number of history entries in memory.
+SAVEHIST=10000              # Maximum number of history entries saved to the file.
+
+# History options:
+setopt share_history        # Share history across all Zsh instances.
+setopt hist_ignore_space    # Ignore commands prefixed with a space.
+setopt hist_ignore_all_dups # Avoid duplicate entries in the history.
+setopt inc_append_history   # Append commands to the history immediately.
+unsetopt beep               # Disable the terminal beep sound.
+
+# Enable intuitive history searching with Up/Down arrows.
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey "^[[A" up-line-or-beginning-search  # Up arrow: Search backward in history.
+bindkey "^[[B" down-line-or-beginning-search # Down arrow: Search forward in history.
 
+# If installed, use atuin for shell history
+# If atuin is used it will supercede some of the above history settings
+if command -v atuin > /dev/null 2>&1; then
+  [ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
+  eval "$(atuin init zsh)"
+fi
 
-# Prompt
+# Prompt with Version Control System (VCS) Info
+# ---------------------------------------------
+# This section configures the shell prompt to display information about version control systems (e.g., Git, SVN).
+# Reference: https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
+
+# Enable prompt substitution for dynamic prompt changes.
 setopt prompt_subst
+
+# Load `vcs_info` to gather version control information.
 autoload -Uz vcs_info
+
+# Enable `vcs_info` for Git and SVN repositories.
 zstyle ':vcs_info:*' enable git svn
+
+# Git-specific configurations:
+# - Show an indicator for unstaged changes (`%F{red}*%f`).
+# - Show an indicator for staged changes (`%F{yellow}*%f`).
+# - Format the branch display (`%F{#bb9af7}%b%u%c%f`).
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:git:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git:*' formats '%F{#bb9af7}%b%u%c%f'
+
+# Git-SVN specific configurations:
+# - Use the same indicators and format as Git repositories.
 zstyle ':vcs_info:git-svn:*' unstagedstr '%F{red}*%f'
 zstyle ':vcs_info:git-svn:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:git-svn:*' formats '%F{#bb9af7}%b%u%c%f'
-# https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
-precmd() {
-    vcs_info
 
+# Configure the `precmd` function to update the prompt before each command.
+# - If inside a VCS repository, show branch info.
+# - Otherwise, only display the current directory.
+precmd() {
+    vcs_info # Update VCS info.
+
+    # Define the prompt based on whether VCS info is available.
     if [[ -z ${vcs_info_msg_0_} ]]; then
-        PS1='%F{cyan}%~%f %F{green}❯%f '
+        PS1='%F{cyan}%~%f %F{green}❯%f ' # No VCS info: Show directory only.
     else
-        PS1='%F{cyan}%~%f ${vcs_info_msg_0_} %F{green}❯%f '
+        PS1='%F{cyan}%~%f ${vcs_info_msg_0_} %F{green}❯%f ' # VCS info: Show branch info.
     fi
 }
 
+### Aliases
+# -----------------
+alias be="bundle exec"                      # Run `bundle exec` with shorthand.
+alias pe="pipenv"                           # Run `pipenv` with shorthand.
+alias gs="git status"                       # Quickly check the status of a Git repository.
+alias boundports="sudo lsof -i -P -n | grep LISTEN" # View active listening ports.
+alias nv="nvim"                             # Use `nvim` as shorthand for Neovim.
+alias gcs="gsutil"                          # Use `gsutil` with shorthand.
+alias ll='ls -lh'
+alias la='ls -a'
 case `uname` in
   Linux)
     alias open='xdg-open'
   ;;
 esac
 
+# Wrapper function for `ls` to use alternatives (exa/eza) if available, with fallback to native `ls`.
 ls() {
   if command -v exa > /dev/null 2>&1; then
     exa "$@"
@@ -75,9 +134,7 @@ ls() {
   fi
 }
 
-alias ll='ls -lh'
-alias la='ls -a'
-
+# Wrapper function for `cat` to use `bat` if available, with fallback to native `cat`.
 cat() {
   if command -v bat > /dev/null 2>&1; then
     bat "$@"
@@ -86,7 +143,7 @@ cat() {
   fi
 }
 
-# cd and autojump using zoxide
+# Wrapper function for `cd` to use `bat` if available, with fallback to native `cd`.
 if command -v zoxide > /dev/null 2>&1; then
   eval "$(zoxide init zsh)"
 fi
@@ -99,41 +156,22 @@ cd() {
   fi
 }
 
-# atuin for shell history
-if command -v atuin > /dev/null 2>&1; then
-  [ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
-  eval "$(atuin init zsh)"
-fi
-
-# Environment
-export BROWSER="chromium"
-export EDITOR="nvim"
-export PAGER="less"
-
-# aliases
-alias be="bundle exec"
-alias pe="pipenv"
-alias gs="git status"
-alias boundports="sudo lsof -i -P -n | grep LISTEN"
-alias nv="nvim"
-alias gcs="gsutil"
-
-# Go
+### Go Language Environment
+# --------------------------
+# Add Go binaries and custom local binaries to the PATH.
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
-# Custom stuff per system if needed
-if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
-
-# mise
-if command -v mise > /dev/null; then
-  eval "$(mise activate zsh)"
+### Local System-Specific Configuration
+# --------------------------------------
+# Source a local `.zshrc_local` file if it exists, for machine-specific customizations.
+if [ -f ~/.zshrc_local ]; then
+  . ~/.zshrc_local
 fi
 
-# Generated for envman. Do not edit.
-if command -v pyenv > /dev/null 2>&1; then
-  [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-  exporitomt PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
+### Mise Integration
+# -------------------
+# Activate `mise` (a tool for managing shell environments) if it is installed.
+if command -v mise > /dev/null; then
+  eval "$(mise activate zsh)"
 fi
