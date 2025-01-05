@@ -59,9 +59,9 @@ case `uname` in
 esac
 
 ls() {
-  if which exa > /dev/null 2>&1; then
+  if command -v exa > /dev/null 2>&1; then
     exa "$@"
-  elif which eza > /dev/null 2>&1; then
+  elif command -v eza > /dev/null 2>&1; then
     eza "$@" 
   else
     if [[ $(uname) == 'Linux' ]] then
@@ -79,7 +79,7 @@ alias ll='ls -lh'
 alias la='ls -a'
 
 cat() {
-  if which bat > /dev/null 2>&1; then
+  if command -v bat > /dev/null 2>&1; then
     bat "$@"
   else
     command cat "$@"
@@ -87,12 +87,12 @@ cat() {
 }
 
 # cd and autojump using zoxide
-if which zoxide > /dev/null 2>&1; then
+if command -v zoxide > /dev/null 2>&1; then
   eval "$(zoxide init zsh)"
 fi
 
 cd() {
-  if which zoxide > /dev/null 2>&1; then
+  if command -v zoxide > /dev/null 2>&1; then
     z "$@"
   else
     builtin cd "$@"
@@ -100,7 +100,7 @@ cd() {
 }
 
 # atuin for shell history
-if which atuin > /dev/null 2>&1; then
+if command -v atuin > /dev/null 2>&1; then
   [ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
   eval "$(atuin init zsh)"
 fi
@@ -126,12 +126,12 @@ export PATH="$PATH:$HOME/go/bin"
 if [ -f ~/.zshrc_local ]; then . ~/.zshrc_local; fi
 
 # mise
-if which mise > /dev/null; then
+if command -v mise > /dev/null; then
   eval "$(mise activate zsh)"
 fi
 
 # Generated for envman. Do not edit.
-if which pyenv > /dev/null 2>&1; then
+if command -v pyenv > /dev/null 2>&1; then
   [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
   exporitomt PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
