@@ -2,15 +2,11 @@
 
 These are my dotfiles 📁
 
-Also houses my neovim, ghostty, and zellij configurations.
+Also houses my neovim, ghostty, zellij, and various other local development configurations.
 
 ## Installation
 
 ### Prerequisities
-I like to keep my setup pretty lean. That being said there's some things to install before
-getting completely up and running. I would normally add this step to the install script, but I tend to jump
-back and forth between MacOS and different distros of linux. My environment is also pretty simple, and
-getting an "all in one" install script just hasn't been worth the squeeze 🍊
 
 - [ghostty](https://ghostty.org)
 - [neovim](https://github.com/neovim/neovim)
@@ -33,5 +29,5 @@ git clone https://github.com/jasondoc3/dotfiles.git
 
 ## Neovim
 
-I use [lazy.nvim](https://github.com/folke/lazy.nvim) to manage plugins.
-I use [Mason](https://github.com/williamboman/mason.nvim) where possible to install LSP servers, linters, and formatters.
+- [lazy.nvim](https://github.com/folke/lazy.nvim) to manage plugins.
+- [Mason](https://github.com/williamboman/mason.nvim) where possible to install LSP servers, linters, and formatters.
