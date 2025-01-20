@@ -2,6 +2,3 @@ theme = tokyonight
 font-family = Source Code Pro
 bold-is-bright = true
 mouse-hide-while-typing = true
-
-# Linux only
-gtk-titlebar = false
