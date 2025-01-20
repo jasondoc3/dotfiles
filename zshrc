@@ -162,6 +162,13 @@ cd() {
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 
+### Mise Integration
+# -------------------
+# Activate `mise` (a tool for managing shell environments) if it is installed.
+if command -v mise > /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
 ### Local System-Specific Configuration
 # --------------------------------------
 # Source a local `.zshrc_local` file if it exists, for machine-specific customizations.
@@ -169,9 +176,3 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
-### Mise Integration
-# -------------------
-# Activate `mise` (a tool for managing shell environments) if it is installed.
-if command -v mise > /dev/null; then
-  eval "$(mise activate zsh)"
-fi
