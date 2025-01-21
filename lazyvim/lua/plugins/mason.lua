@@ -6,6 +6,8 @@ return {
       "shellcheck",
       "shfmt",
       "jq",
+      "black",
+      "isort",
     },
   },
 }

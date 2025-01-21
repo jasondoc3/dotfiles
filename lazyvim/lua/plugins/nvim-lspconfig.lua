@@ -24,6 +24,7 @@ return {
         },
       },
       vtsls = {},
+      pyright = {},
     },
   },
 }
