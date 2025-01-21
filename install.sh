@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -32,7 +32,11 @@ echo "Installing dotfiles..."
 mkdir -p $HOME/.config
 printf "${GREEN}%-10s${NC} %s\n" "Created" "$HOME/.config" 
 
-for config in "atuin" "abat" "nvim" "zellij" "ghostty"; do
+for config in "atuin" "abat" "lazyvim" "zellij" "ghostty"; do
+  if [[ $config == "lazyvim" ]]; then
+    create_symlink "$SCRIPT_DIR/$config" "$HOME/.config/nvim"
+    continue
+  fi
   create_symlink "$SCRIPT_DIR/$config" "$HOME/.config/$config"
 done
 
