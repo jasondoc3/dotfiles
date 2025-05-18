@@ -21,7 +21,7 @@ Also houses my neovim, ghostty, zellij, and various other local development conf
 ### Install Script
 
 The install script creates symbolic links 🔗 between the dotfiles in this repo and your home directory.
-
+:
 ```
 git clone https://github.com/jasondoc3/dotfiles.git
 ./dotfiles/install.sh
@@ -29,5 +29,5 @@ git clone https://github.com/jasondoc3/dotfiles.git
 
 ## Neovim
 
-- [lazy.nvim](https://github.com/folke/lazy.nvim) to manage plugins.
-- [Mason](https://github.com/williamboman/mason.nvim) where possible to install LSP servers, linters, and formatters.
+I use [LazyVim](https://www.lazyvim.org/), with a little bit of additional plugins.
+
