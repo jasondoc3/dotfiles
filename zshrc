@@ -54,7 +54,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down arrow: Search forward in his
 # If atuin is used it will supercede some of the above history settings
 if command -v atuin > /dev/null 2>&1; then
   [ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
-  eval "$(atuin init zsh)"
+  eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
 # Prompt with Version Control System (VCS) Info
