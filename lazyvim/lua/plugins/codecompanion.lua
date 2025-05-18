@@ -5,7 +5,7 @@ return {
     require("codecompanion").setup({
       strategies = {
         chat = {
-          adapter = "anthropic",
+          adapter = "gemini",
           keymaps = {
             send = {
               modes = { i = "<C-CR>" },
@@ -13,7 +13,10 @@ return {
           },
         },
         inline = {
-          adapter = "anthropic",
+          adapter = "gemini",
+        },
+        cmd = {
+          adapter = "gemini",
         },
       },
     })
@@ -28,6 +31,24 @@ return {
       "<leader>ccc",
       "<cmd>CodeCompanionChat<CR>",
       desc = "Chat",
+      mode = "n",
+    },
+    {
+      "<leader>cco",
+      "<cmd>CodeCompanionChat openai<CR>",
+      desc = "Chat Openai",
+      mode = "n",
+    },
+    {
+      "<leader>ccg",
+      "<cmd>CodeCompanionChat gemini<CR>",
+      desc = "Chat Gemini",
+      mode = "n",
+    },
+    {
+      "<leader>cca",
+      "<cmd>CodeCompanionChat anthropic<CR>",
+      desc = "Chat Claude",
       mode = "n",
     },
   },
