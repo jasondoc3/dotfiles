@@ -3,6 +3,11 @@ return {
   opts = {},
   config = function()
     require("codecompanion").setup({
+      display = {
+        diff = {
+          enabled = false,
+        },
+      },
       strategies = {
         chat = {
           adapter = "gemini",
