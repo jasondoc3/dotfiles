@@ -7,6 +7,11 @@ return {
         diff = {
           enabled = false,
         },
+        chat = {
+          window = {
+            width = 0.3,
+          },
+        },
       },
       strategies = {
         chat = {
