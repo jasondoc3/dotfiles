@@ -18,14 +18,14 @@ Also houses my neovim, ghostty, zellij, and various other local development conf
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [atuin](https://github.com/atuinsh/atuin)
 
-### Install Script
+### Installation
 
-The install script creates symbolic links 🔗 between the dotfiles in this repo and your home directory.
-:
+This repo uses gnu [stow](https://www.youtube.com/watch?v=NoFiYOqnC4o) to create symlinks to dotfiles in the home directory.
+
 ```
-git clone https://github.com/jasondoc3/dotfiles.git
-./dotfiles/install.sh
+stow nvim
 ```
+
 
 ## Neovim
 
