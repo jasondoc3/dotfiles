@@ -60,4 +60,4 @@ fi
 set +h
 
 # Bind the inputrc
-[[ $- == *i* ]] && bind -f ~/inputrc.portable
+[[ $- == *i* ]] && bind -f ~/.inputrc.portable
