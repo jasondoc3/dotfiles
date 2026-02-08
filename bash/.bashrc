@@ -4,9 +4,11 @@
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 #
-# This "if" check was written by jason so that way this bashrc can easily be used on macOS too
+# This "if" check was written by jason so that way this bashrc can easily be used on macOS
 if [[ -f ~/.local/share/omarchy/default/bash/rc ]]; then
   source ~/.local/share/omarchy/default/bash/rc
+else
+  source ~/dotfiles/bash/.bashrc.portable
 fi
 
 # Add your own exports, aliases, and functions here.
