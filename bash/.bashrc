@@ -8,7 +8,7 @@
 if [[ -f ~/.local/share/omarchy/default/bash/rc ]]; then
   source ~/.local/share/omarchy/default/bash/rc
 else
-  source ~/dotfiles/bash/.bashrc.portable
+  source ~/.bashrc.portable
 fi
 
 # Add your own exports, aliases, and functions here.
