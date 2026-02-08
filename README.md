@@ -23,7 +23,13 @@ Also houses my neovim, ghostty, zellij, and various other local development conf
 This repo uses gnu [stow](https://www.youtube.com/watch?v=NoFiYOqnC4o) to create symlinks to dotfiles in the home directory.
 
 ```
+cd ~
+git clone https://github.com/jasondoc3/dotfiles
+cd ~/dotfiles
+
+stow bash
 stow nvim
+... 
 ```
 
 
