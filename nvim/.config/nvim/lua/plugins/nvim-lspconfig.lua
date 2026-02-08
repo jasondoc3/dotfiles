@@ -10,21 +10,7 @@ return {
           safeAutocorrect = false,
         },
       },
-      -- Only use solagraph for autocompletion
-      solargraph = {
-        mason = false,
-        cmd = { "bundle", "exec", "solargraph", "stdio" },
-        init_options = {
-          formatting = false,
-        },
-        settings = {
-          solargraph = {
-            diagnostics = false,
-          },
-        },
-      },
       vtsls = {},
-      pyright = {},
     },
   },
 }
