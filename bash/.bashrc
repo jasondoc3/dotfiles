@@ -23,11 +23,49 @@ alias gcs="gsutil"                                  # Use `gsutil` with shorthan
 alias ll='ls -lh'
 alias la='ls -a'
 
+# functions
 cat() {
   if command -v bat >/dev/null 2>&1; then
     bat "$@"
   else
     command cat "$@"
+  fi
+}
+
+# Create a new worktree and branch from within current git directory.
+gwt() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: gwt [branch name]"
+    return 1
+  fi
+
+  local branch="$1"
+  local base="$(basename "$PWD")"
+  local path="../${base}--${branch}"
+
+  git worktree add -b "$branch" "$path"
+  mise trust "$path"
+  cd "$path"
+}
+
+# Remove worktree and branch from within active worktree directory.
+gwtd() {
+  if gum confirm "Remove worktree and branch?"; then
+    local cwd base branch root
+
+    cwd="$(pwd)"
+    worktree="$(basename "$cwd")"
+
+    # split on first `--`
+    root="${worktree%%--*}"
+    branch="${worktree#*--}"
+
+    # Protect against accidentially nuking a non-worktree directory
+    if [[ "$root" != "$worktree" ]]; then
+      cd "../$root"
+      git worktree remove "$worktree" --force
+      git branch -D "$branch"
+    fi
   fi
 }
 
