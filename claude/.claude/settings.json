@@ -5,7 +5,7 @@
     "context7@claude-plugins-official": true
   },
   "permissions": {
-    "allow":[
+    "allow": [
       "Bash(git *)",
       "Bash(gh *)",
       "Bash(ls *)",
@@ -16,7 +16,38 @@
       "WebFetch",
       "WebSearch",
       "mcp__plugin_linear_linear",
-      "mcp__plugin_context7_context7"
+      "mcp__plugin_context7_context7",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(bundle exec rails console:*)",
+      "Bash(bundle exec rails c:*)",
+      "Bash(bundle exec rspec:*)",
+      "Bash(bundle exec rake rspec:*)",
+      "Bash(bundle exec spring rspec:*)",
+      "Bash(bundle exec rails:*)",
+      "Bash(bundle exec rubocop:*)",
+      "Bash(rails routes)",
+      "Bash(jq:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(bundle exec rake rswag:specs:swaggerize:*)",
+      "Bash(bundle exec rails openapi:validate:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git status:*)",
+      "Bash(git show:*)",
+      "Bash(bundle exec rake:*)",
+      "Bash(bundle exec rake db:test:load_schema:*)",
+      "Bash(bundle exec rails db:test:prepare:*)",
+      "Bash(bundle exec rake zeitwerk:check:*)",
+      "WebFetch(domain:*)",
+      "WebSearch",
+      "mcp__devin__ask_question",
+      "mcp__linear__get_project",
+      "mcp__linear__list_projects"
     ]
   },
   "env": {
