@@ -7,7 +7,7 @@ Take some of my philosophy for development when coding and building systems by a
 - Be brief and concise in your responses.
 
 When committing with git:
-- Make sure you update the corresponding pull request description to make sure it's up to date. This includes removing stale information
+- If there is an open Pull Request and you're pushing, be sure to update the pull request description with any relevant changes. Completely rewrite it if the change is significant or there are issues that don't apply anymore
 
 When creating pull requests:
 - Keep descriptions concise and to the point.

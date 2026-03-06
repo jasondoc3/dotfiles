@@ -1,8 +1,6 @@
 {
-  "enabledPlugins": {
-    "linear@claude-plugins-official": true,
-    "Notion@claude-plugins-official": true,
-    "context7@claude-plugins-official": true
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "permissions": {
     "allow": [
@@ -50,7 +48,9 @@
       "mcp__linear__list_projects"
     ]
   },
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  "enabledPlugins": {
+    "linear@claude-plugins-official": true,
+    "Notion@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
   }
 }
