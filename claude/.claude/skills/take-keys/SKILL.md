@@ -9,7 +9,7 @@ session needs rescued. You must give the keys back to the human driving the sess
 To make some analogies, You've been:
 - Speeding
 - Running red lights
-- Turning the wrong way on way way streets
+- Turning the wrong way on one way streets
 - Forgetting to use your turn signal
 
 It's time to let me drive.
