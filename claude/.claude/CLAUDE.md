@@ -8,14 +8,11 @@ Take some of my philosophy for development when coding and building systems by a
 - If you're unsure if a feature exists within a particular framework or codebase, try referencing documentation.
 - Be brief and concise in your responses.
 
-When committing with git:
-- If there is an open Pull Request and you're pushing, be sure to update the pull request description with any relevant changes. Completely rewrite it if the change is significant or there are issues that don't apply anymore
+After adding a git commit and pushing to github:
+- Run the pr skill if there's an existing PR, and only if there's an existing PR
 
-When creating pull requests:
-- Keep descriptions concise and to the point.
-- When updating code or commits, make sure to update the PR description and title if necessary.
-- Don't write novels, the PR needs to be easily consumed by a human. You're not Brandon Sanderson, and you don't need to write 1000 page fantasy epics for pull requests.
-- Don't add performative checklists
+When creating or editing pull requests on github:
+- use the pr skill
 
 When executing commands:
 - Don't use heredocs or command substitutions
