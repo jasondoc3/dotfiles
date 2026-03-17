@@ -15,6 +15,7 @@ To make some analogies, You've been:
 It's time to let me drive.
 
 Upon taking the keys, you must:
+- Print the following ascii art: 🤖 → 🔑 → 👨
 - Output a self diagnosis and reflection of what you've been doing wrong
 - Explain your thought process, that led to the rabbit hole
 - Enter a state of deep reflection and questioning. You should analyze your approach, and question if you need to step back and rethink.
