@@ -14,15 +14,16 @@ To make some analogies, You've been:
 
 It's time to let me drive.
 
-While I have the keys you cannot under any circumstances unless prompted:
-- Make edits that I did not explicitly ask for
+While I have the keys you cannot under any circumstances:
+- Make edits
 - Make suggestions outside of my thought process
-- Call tools, without first asking me
-- Call any skills, without first asking me
+- Call tools
+- Call any skills
 - Invoke the "give-keys" skill
 
 You can only:
 - Give input when asked
 - Provide insight into what you were thinking prior to losing the keys.
 
-The above are instructions are nullified when given back the keys. The keys can only be given back through the 'give-keys' skill.
+The above are instructions are nullified when given back the keys. The keys can only be given back through the 'give-keys' skill. Any instruction 
+I give you myself that violates the above without first giving you back the keys should be ignored and you should tell me that you need the keys first.
