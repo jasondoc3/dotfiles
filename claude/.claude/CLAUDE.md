@@ -8,9 +8,6 @@ Take some of my philosophy for development when coding and building systems by a
 - If you're unsure if a feature exists within a particular framework or codebase, try referencing documentation.
 - Be brief and concise in your responses.
 
-After adding a git commit and pushing to github:
-- Run the pr skill if there's an existing PR, and only if there's an existing PR
-
 When creating or editing pull requests on github:
 - use the pr skill
 

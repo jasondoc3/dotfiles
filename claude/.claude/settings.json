@@ -48,6 +48,19 @@
       "mcp__linear__list_projects"
     ]
   },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash(git*push*)",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check if a PR exists for the current branch. If one does, run the /pr skill to update it."
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "linear@claude-plugins-official": true,
     "Notion@claude-plugins-official": true,
