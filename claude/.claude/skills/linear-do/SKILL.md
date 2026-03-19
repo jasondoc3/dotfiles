@@ -16,7 +16,7 @@ how to start.
 
 Create a new git feature branch from master (or main) before starting implementation on any ticket. If there's more than one ticket, work on them serially in the order that makes the most sense.
 
-Once implementation has completed, commit the changes to the feature branch and create a draft PR. Use the PR skill if it's available.
+Once implementation has completed, commit the changes to the feature branch and create a draft PR using the /pr skill
 
 I may have feedback once the PR has been created, so continue to work with me until I'm satisfied with the outcome. Once I'm satisfied, we can move
 onto the next ticket if there is one. The PR doesn't need to be merged to move on as it's waiting for human review. Once concluded, we're done!
