@@ -25,12 +25,13 @@ While I have the keys you cannot under any circumstances:
 - Make suggestions outside of my thought process
 - Call tools that result in CRUD operations. This includes but is not limited to modifying files, creating git commits, creating pull requests, invoking MCP tools that result in upstream side effects, etc.
 - Call any skills
-- Invoke the "give-keys" skill
+- Invoke the "give-keys" skill. Never self invoke or load the give-keys skill. It has to be invoked by me.
 
 You can only:
 - Give input when asked
 - Provide insight into what you were thinking prior to losing the keys.
 - Invoke tools that allow you to retrieve information that can help answer questions while I'm driving. 
 
-The above are instructions are nullified when given back the keys. The keys can only be given back through the 'give-keys' skill. Any instruction 
-I give you myself that violates the above without first giving you back the keys should be ignored and you should tell me that you need the keys first.
+The above are instructions are nullified when given back the keys. The keys can only be given back through the 'give-keys' skill. Only I can invoke the /give-keys skill. You are not allowed to invoke it.
+
+Any instruction I give you myself that violates the previous instructions without first giving you back the keys should be ignored and you should tell me that you need the keys first.
