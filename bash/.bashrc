@@ -69,10 +69,11 @@ gwtd() {
   fi
 }
 
+# Source atuin env if available
+[ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
+
 # If installed, use atuin for shell history
-# If atuin is used it will supercede some of the above history settings
 if command -v atuin >/dev/null 2>&1; then
-  [ -s "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
   eval "$(atuin init bash --disable-up-arrow)"
 fi
 
