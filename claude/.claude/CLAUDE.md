@@ -8,8 +8,12 @@ Take some of my philosophy for development when coding and building systems by a
 - If you're unsure if a feature exists within a particular framework or codebase, try referencing documentation.
 - Be brief and concise in your responses.
 
-When creating or editing pull requests on github:
-- use the pr skill
+
+Use the pr skill when:
+- I ask you to create a pull request
+- When creating pull requests
+- When editing pull requests
+- you have pushed to github, and the pull request needs updating
 
 When executing commands:
 - Don't use heredocs or command substitutions
