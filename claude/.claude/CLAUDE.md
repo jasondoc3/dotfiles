@@ -7,7 +7,7 @@ Take some of my philosophy for development when coding and building systems by a
 - If it's a lot of code, question if it's needed.
 - If you're unsure if a feature exists within a particular framework or codebase, try referencing documentation.
 - Be brief and concise in your responses.
-
+- Prefer methodical approaches over parallelization and speed. I'm already gaining speed by using an agent, I need you to check your output.
 
 Use the pr skill when:
 - I ask you to create a pull request
