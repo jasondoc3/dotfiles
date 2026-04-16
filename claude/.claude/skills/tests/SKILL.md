@@ -9,4 +9,5 @@ Write tests for the current diff/changeset. When writing tests, use the followin
 - Test the behavior, not the implementation.
 - Write both functional and unit tests, if applicable.
 - Don't waste time testing nitty gritty behavior if the larger test suite covers those cases.
+- Do not import modules dynamically inside tests. Always import them at the top of the file.
 
