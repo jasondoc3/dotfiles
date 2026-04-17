@@ -12,4 +12,11 @@ Gather context on my current linear status. You should use this to find the foll
 - My active issues that are in progress
 - My other assigned issues
 
-You can use this context to add issues appropriately. Use triage as the default status unless otherwise prompted.
+You can use this context to add issues appropriately.
+
+Use the following rules when creating issues unless otherwise stated. They should be:
+
+- In TODO status
+- Assigned to me
+- In my current project
+- In my current team
