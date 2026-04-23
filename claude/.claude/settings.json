@@ -43,6 +43,7 @@
       "Bash(bundle exec rake zeitwerk:check:*)",
       "WebFetch(domain:*)",
       "WebSearch",
+      "Write(/tmp/**)",
       "mcp__devin__ask_question",
       "mcp__linear__get_project",
       "mcp__linear__list_projects"
@@ -65,6 +66,5 @@
     "linear@claude-plugins-official": true,
     "Notion@claude-plugins-official": true,
     "context7@claude-plugins-official": true
-  },
-  "model": "sonnet"
+  }
 }
