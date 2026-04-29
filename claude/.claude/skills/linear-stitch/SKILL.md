@@ -11,5 +11,5 @@ work on it. Follow any additional instructions given upon skill invocation.
 Perform the following steps:
 
 1. First, gain context of my current linear project using /linear-me unless already obtained.
-2. Create a linear issue using /linear-create
+2. Create a linear issue using /linear-create using an initial status of "in progress"
 3. Do the issue invoking /linear-do

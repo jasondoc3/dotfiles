@@ -11,4 +11,4 @@ Perform the following steps:
 
 1. Gain context of my current linear project using /linear-me unless already obtained.
 2. Draft an issue title and description and propose it to me. Let's work through any necessary modifications.
-3. Create the linear issue in my current project assigned to me that's in progress. If no current project, create an issue generally on my current team.
+3. Create the linear issue in my current project assigned to me that's in the "todo" status unless instructed otherwise. If no current project, create an issue in triage on my current team instead.
