@@ -1,14 +1,41 @@
 ---
 name: linear-create
-description: Take the current ask, get linear context, create a linear issue retroactively
+description: Create a linear issue
 ---
 
-The linear MCP server is a pre-requisite to using this skill. It must be available. If it's not bail, and tell me why.
+## Pre-Requisites
 
-This skill is to take the current context of what we're working on, create a linear issue. Follow any additional instructions given upon skill invocation.
+- The linear MCP server is a pre-requisite to using this skill. It must be available. If it's not bail, and tell me why.
+- Before starting, invoke the `/linear-me` skill
 
-Perform the following steps:
+## Guidelines and Description
 
-1. Gain context of my current linear project using /linear-me unless already obtained.
-2. Draft an issue title and description and propose it to me. Let's work through any necessary modifications.
-3. Create the linear issue in my current project assigned to me that's in the "todo" status unless instructed otherwise. If no current project, create an issue in triage on my current team instead.
+This skill is to take the current context of what we're working on, create a linear issue. Follow any additional instructions given with the skill invocation.
+
+When creating a ticket, use these guidelines unless instructed otherwise:
+- Use the issue template given below 
+- Be concise in your description
+- Don't get overly verbose with implementation details
+- Leave some open endedness for implementation upon work starting
+- Keep acceptance criteria high level
+- Create issues in my current project in the "todo" status. If I have no current project, create them in triage on my current team.
+- Assign issues to me unless
+
+## Execution Instructions
+
+### Steps
+
+1. Gain context of my current linear project.
+2. Draft an issue title and description and propose it to me.
+3. Let's work through any necessary modifications.
+4. Upon my acceptance, create the linear issue following the guidelines. 
+
+### Issue Template
+
+#### Description
+
+Who will the work impact? Why is is valuable? What work is required?
+
+#### Acceptance criteria
+
+Acceptance criteria are the “conditions that a software product must satisfy to be accepted by a user, customer or other stakeholders.”

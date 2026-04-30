@@ -10,5 +10,4 @@ Create or edit a pull request using the "gh" cli tool with the following instruc
 - Don't add performative checklists. Or frankly, don't add checklists at all.
 - If connected to a linear issue, the title of the PR should begin with the linear ticket id in brackets. For example, if the ticket id is EGX-100 then the title of the PR should begin with [EGX-100]
 - If there is a PR already open, be sure to update its description with any relevant code changes/commits since the last update. Completely rewrite the description if it is no longer relevant to the changeset.
-- Don't use heredocs or command substitutions when writing PR descriptions.
 - Don't write performative test plans
