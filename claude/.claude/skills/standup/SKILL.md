@@ -1,9 +1,14 @@
 ---
-name: linear-standup
+name: standup
 description: Find out what I did yesteray, and what I'm working on today
 ---
 
-The linear MCP server is a pre-requisite to using this skill. It must be available. If it's not bail, and tell me why.
+## Rre-requisites
+If the following are unavailable, abort the skill and explain why.
+
+1. The linear MCP server
+2. The github CLI (gh)
+
 
 ## Instructions
 
