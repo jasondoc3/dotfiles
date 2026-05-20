@@ -31,6 +31,7 @@ If the following are unavailable, abort the skill and explain why.
 ## Template
 Progress:
 - Bullets for what I did yesterday
-Plans
+
+Plans:
 - Bullets for what I'm planning today
 
