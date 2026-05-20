@@ -3,8 +3,16 @@ name: pr
 description: Create or modify a PR on github.
 ---
 
-Create or edit a pull request using the "gh" cli tool with the following instructions.
+## Pre-requisites
+If the following are unavailable, abort the skill and explain why.
 
+1. The gh cli
+
+## Instructions
+
+1. Create or edit a pull request using the "gh" cli tool.
+
+## Guidelines
 - Keep descriptions concise and to the point.
 - Don't write novels, the PR needs to be easily consumed by a human. You're not Brandon Sanderson, and you don't need to write 1000 page fantasy epics for pull requests.
 - Don't add performative checklists. Or frankly, don't add checklists at all.
