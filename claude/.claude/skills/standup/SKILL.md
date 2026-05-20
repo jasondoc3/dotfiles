@@ -25,7 +25,7 @@ If the following are unavailable, abort the skill and explain why.
 - Be brief and keep the updates high level
 - Write for your manager, not another engineer on your team.
 - Don't report implementation details. No function names, lass names, variables, etc.
-- Only report relevant calendar meetings. Skip 1 on 1s and rote updates like standup or planning sessions.
+- Only report relevant calendar meetings. Skip 1 on 1s and rote updates like standup, planning sessions, or weekly kickoffs.
 - Don't include Pull Request or linear issue identifiers and links.
 
 ## Template
