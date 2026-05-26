@@ -15,6 +15,7 @@ Gather context on my current linear status. You should use this to find the foll
 - My current project (planned or started but preferring started). If one is not started, the most recent project I've been assigned to lead. Projects that are completed are not candidates for this.
 - My active issues that are in progress
 - My other assigned issues
+- My comments on others issues or documents, particular technical specs or project descriptinos
 
 You can use this context to add issues appropriately.
 

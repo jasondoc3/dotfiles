@@ -9,15 +9,17 @@ If the following are unavailable, abort the skill and explain why.
 1. The linear MCP server
 2. The github CLI (gh)
 3. The gws CLI (gws)
+4. The slack MCP server
 
 ## Instructions
 
 1. Invoke the /linear-me skill.
 2. Use gh to search my recent github PRs.
 3. Use gws calendar events (gws calendar events list --params '{"calendarId":"primary") to get my events.
-4. Find out what I did yesterday, and what I'm planning on doing today.
-5. Output this in the template style shown below.
-6. Ask me clarifications and edits.
+4. Use slack to find out my important interactions, and dealings.
+5. Find out what I did yesterday, and what I'm planning on doing today.
+6. Output this in the template style shown below.
+7. Ask me clarifications and edits.
 
 ## Guidelines
 
@@ -27,6 +29,7 @@ If the following are unavailable, abort the skill and explain why.
 - Don't report implementation details. No function names, lass names, variables, etc.
 - Only report relevant calendar meetings. Skip 1 on 1s and rote updates like standup, planning sessions, or weekly kickoffs.
 - Don't include Pull Request or linear issue identifiers and links.
+- Don't report anything in my slack DMs unless its related to high level tasks and planning.
 
 ## Template
 Progress:
