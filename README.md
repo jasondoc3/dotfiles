@@ -4,13 +4,14 @@ These are my dotfiles 📁
 
 Also houses my neovim, ghostty, zellij, and various other local development configurations.
 
+Some of the configurations like neovim and hyprland synced are from [Omarchy](https://github.com/basecamp/omarchy), which I run as my daily driver.
+
 ## Installation
 
 ### Prerequisities
 
 - [ghostty](https://ghostty.org)
 - [neovim](https://github.com/neovim/neovim)
-- [zellij](https://github.com/zellij-org/zellij)
 - [bat](https://github.com/sharkdp/bat)
 - [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
