@@ -70,6 +70,10 @@ gwtd() {
 }
 
 # If installed, use atuin for shell history
+# Atuin needs bash-preexec to record history in bash. Using the master snapshot
+# (as installed by https://setup.atuin.sh) because the 0.6.0 release packaged by
+# Arch predates bash 5.3 and its hooks silently never fire.
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 # Source atuin env if available
 if [ -s "$HOME/.atuin/bin/env" ]; then
   source "$HOME/.atuin/bin/env"
