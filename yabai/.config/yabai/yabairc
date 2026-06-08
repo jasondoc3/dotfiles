@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+# yabai config — BSP, no scripting addition (SIP intact)
+
+# layout
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+
+# gaps (hyprland-ish; set all to 0 if you want flush tiling)
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap     8
+
+# mouse: alt + drag to move/resize, like hyprland's SUPER+drag
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
+
+# focus follows mouse off (flip to "autoraise" if you miss hyprland's behavior)
+yabai -m config focus_follows_mouse off
+
+# apps that should never be tiled
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+
+echo "yabai configuration loaded.."
