@@ -41,6 +41,7 @@
       "Bash(bundle exec rake db:test:load_schema:*)",
       "Bash(bundle exec rails db:test:prepare:*)",
       "Bash(bundle exec rake zeitwerk:check:*)",
+      "Bash(rg:*)",
       "WebFetch(domain:*)",
       "WebSearch",
       "Write(/tmp/**)",
