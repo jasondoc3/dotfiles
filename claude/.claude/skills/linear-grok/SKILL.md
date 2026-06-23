@@ -9,7 +9,7 @@ If the following are unavailable, abort the skill and explain why.
 1. The linear MCP server
 
 ## Instructions
-1. Gain context on the linear issue(s) or project(s) given with the skill.
+1. Gain context on the linear issue(s) or project(s) given with the skill. This includes description and comments.
 2. Summarize your thoughts on them, and ask clarification if something isn't clear enough.
 
 ## Guidelines
