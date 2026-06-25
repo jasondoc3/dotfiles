@@ -25,6 +25,7 @@ When creating a ticket, use these guidelines unless instructed otherwise:
 - Be concise in your description
 - Don't get overly verbose with implementation details
 - Leave some open endedness for implementation upon work starting
+- Don't make references to functions or code, keeping the task description high level.
 - Keep acceptance criteria high level
 - Create issues in my current project in the "todo" status. If I have no current project, create them in triage on my current team.
 - Assign issues to me unless
