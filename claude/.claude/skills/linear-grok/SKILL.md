@@ -14,5 +14,5 @@ If the following are unavailable, abort the skill and explain why.
 
 ## Guidelines
 - If there's not enough context, let's have a mini planning session so I can clarify what the scope should available
-- If we're working through an issue, any planning that is done here should be written back to its description.
+- If we're working through an issue and we have come to a conclusion, prompt me to update the description of the linear ticket (or write it as a comment).
 - Do not hesitate to enter this planning session if you're confused or don't know how to start. 
