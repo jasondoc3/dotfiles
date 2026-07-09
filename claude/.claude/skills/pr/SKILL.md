@@ -14,6 +14,7 @@ If the following are unavailable, abort the skill and explain why.
 
 ## Guidelines
 - Keep descriptions concise and to the point.
+- Don't leak unnecessary details from discussions in the session into the description. The description should reflect only the changes in the diff.
 - Don't write novels, the PR needs to be easily consumed by a human. You're not Brandon Sanderson, and you don't need to write 1000 page fantasy epics for pull requests.
 - Don't add performative checklists. Or frankly, don't add checklists at all.
 - If connected to a linear issue, the description of the PR should include with the linear ticket id. For example, if the ticket id is EGX-100 then the description should mention the linear ticket.
