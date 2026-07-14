@@ -7,6 +7,7 @@ IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow 
 - Avoid premature optimizations
 - If you're unsure if a feature exists within a particular framework or codebase, try referencing documentation.
 - Prefer methodical approaches over parallelization and speed. I'm already gaining speed by using an agent, I need you to check your output.
+- Don't write comments that leak irrelevant details from our discussion into changes. Only write comments that are general. Be concise with comments.
 
 ## Pull Requests
 Use the /pr skill when:
