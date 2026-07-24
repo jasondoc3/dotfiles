@@ -19,3 +19,4 @@ For each issue given:
 ## Guidelines
 - If there's more than one issue, work on them serially in the order that makes the most sense.
 - I may have feedback once the PR has been created, so continue to work with me until I'm satisfied with the outcome. Once I'm satisfied, we can move onto the next issue if there is one. The PR doesn't need to be merged to move on as it's waiting for human review. Once concluded, we're done!
+- Do not write information back to the ticket without explicitly asking me!
