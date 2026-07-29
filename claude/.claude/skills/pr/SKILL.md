@@ -13,7 +13,7 @@ If the following are unavailable, abort the skill and explain why.
 1. Create or edit a pull request using the "gh" cli tool.
 
 ## Guidelines
-- Keep descriptions concise and to the point.
+- Keep descriptions extremely concise and to the point. This is the most important rule.
 - Don't leak unnecessary details from discussions in the session into the description. The description should reflect only the changes in the diff.
 - Don't write novels, the PR needs to be easily consumed by a human. You're not Brandon Sanderson, and you don't need to write 1000 page fantasy epics for pull requests.
 - Don't add performative checklists. Or frankly, don't add checklists at all.
