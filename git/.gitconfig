@@ -10,6 +10,7 @@
 	co = checkout
   cob = checkout -b
   df = diff
+  dft = difftool
   lg = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	purr = pull --rebase
   pushf = push --force
@@ -27,5 +28,11 @@
   default = current
 [credential]
 	helper = cache --timeout=86400
+[diff]
+  tool = hunk
+[difftool]
+  prompt = false
+[difftool "hunk"]
+  cmd = hunk difftool \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [core]
   editor = nvim

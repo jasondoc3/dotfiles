@@ -18,6 +18,7 @@ Some of the configurations like neovim and hyprland synced are from [Omarchy](ht
 - [mise](https://mise.jdx.dev)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [atuin](https://github.com/atuinsh/atuin)
+- [hunk](https://github.com/modem-dev/hunk)
 
 ### Installation
 
