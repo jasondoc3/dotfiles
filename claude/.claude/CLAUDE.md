@@ -21,6 +21,12 @@ Use the /tests skill when
 - Writing new tests
 - Modifying existing tests
 
+## Code comments
+- Don't leave performative or useless comments
+- Keep any comments written brief and to the point 
+- Don't leak unnecessary details from our session into a comment. For example don't add information about our back and forth discussion or details about why a decision was made unless it's relevant to the code.
+- Bias towards not leaving comments when code or config files are self documenting.
+
 ## Misc
 When executing commands:
 - Don't use heredocs or command substitutions
