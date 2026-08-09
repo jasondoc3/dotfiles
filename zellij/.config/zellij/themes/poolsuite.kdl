@@ -1,0 +1,15 @@
+themes {
+    poolsuite {
+        fg "#11151A"
+        bg "#DCD2BF"
+        black "#B8AC92"
+        red "#A30E34"
+        green "#0A5F42"
+        yellow "#6E4500"
+        blue "#13447A"
+        magenta "#7A2158"
+        cyan "#0C5050"
+        white "#11151A"
+        orange "#7D4200"
+    }
+}
