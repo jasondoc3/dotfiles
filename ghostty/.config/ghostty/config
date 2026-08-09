@@ -8,8 +8,8 @@ font-size = 9
 
 # Window
 window-theme = auto
-window-padding-x = 7
-window-padding-y = 7
+window-padding-x = 3
+window-padding-y = 3
 confirm-close-surface=false
 resize-overlay = never
 gtk-toolbar-style = flat
