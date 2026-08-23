@@ -1,4 +1,3 @@
-nvim/.config/nvim/lua/plugins/theme.lua
 hyprland/.config/hypr/monitors.lua
 hyprland/.config/hypr/hyprsunset.conf
 hyprland/.config/hypr/xdph.conf
