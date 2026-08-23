@@ -68,14 +68,7 @@
     "Notion@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "slack@claude-plugins-official": true,
-    "sentry@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
-      }
-    }
+    "sentry@claude-plugins-official": true,
+    "datadog@claude-plugins-official": true
   }
 }
