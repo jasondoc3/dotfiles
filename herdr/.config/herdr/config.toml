@@ -55,19 +55,19 @@ new_tab = "prefix+c"
 rename_tab = "prefix+r"
 close_tab = "prefix+k"
 switch_tab = ["prefix+1..9", "alt+1..9"]
-previous_tab = ["prefix+p", "alt+left"]
-next_tab = ["prefix+n", "alt+right"]
+previous_tab = ["prefix+p", "alt+shift+h"]
+next_tab = ["prefix+n", "alt+shift+l"]
 
-# Like swap-window -t -1/+1 on M-S-Left/Right
-move_tab_previous = "alt+shift+left"
-move_tab_next = "alt+shift+right"
+# Like swap-window -t -1/+1
+move_tab_previous = "prefix+shift+h"
+move_tab_next = "prefix+shift+l"
 
 # Sessions -> workspaces
 new_workspace = "prefix+shift+c"
 rename_workspace = "prefix+shift+r"
 close_workspace = "prefix+shift+k"
-previous_workspace = ["prefix+shift+p", "alt+up"]
-next_workspace = ["prefix+shift+n", "alt+down"]
+previous_workspace = ["prefix+shift+p", "alt+shift+k"]
+next_workspace = ["prefix+shift+n", "alt+shift+j"]
 
 # Worktrees; new_worktree keeps its default prefix+shift+g
 remove_worktree = "prefix+alt+g"
