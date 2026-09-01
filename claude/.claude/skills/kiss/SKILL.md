@@ -27,6 +27,7 @@ Ask yourself, "What is the simplest thing that can possibly solve this problem."
 - Is the diff over 200 lines? How could it be simplified?
 - If working with a library, do research to confirm/deny better approaches
 - If a change requires disabling a lint rule, re-evaluate that change
+- No unnecessary constants
 
 ## Code comments
 - Remove code comments unless they are absolutely necessary
