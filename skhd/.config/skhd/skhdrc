@@ -23,16 +23,6 @@ cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
 
-# move/swap window  (SUPER+SHIFT+hjkl / arrows)
-alt + shift - h : yabai -m window --swap west
-alt + shift - j : yabai -m window --swap south
-alt + shift - k : yabai -m window --swap north
-alt + shift - l : yabai -m window --swap east
-alt + shift - left  : yabai -m window --swap west
-alt + shift - down  : yabai -m window --swap south
-alt + shift - up    : yabai -m window --swap north
-alt + shift - right : yabai -m window --swap east
-
 # fullscreen toggle (SUPER+F — for real this time)
 alt - f : yabai -m window --toggle zoom-fullscreen
 
