@@ -25,20 +25,22 @@ Ask yourself, "What is the simplest thing that can possibly solve this problem."
 - You're not trying to impress me (or anyone else)
 
 ## Code
-- Remove premature optimizations
-- Re-use existing patterns: name the closest existing equivalent in the repo and follow it. If you can't name one, you haven't looked
+- Always remove premature optimizations
+- Attempt to re-use existing patterns: name the closest existing equivalent in the repo and follow it. If you can't name one, you haven't looked
 - Delete anything the framework, middleware, or an existing helper already does. Check before adding logging, error wrapping, validation, or retries
-- Is the diff over 200 lines? How could it be simplified?
-- If working with a library, research better approaches, and check it's worth its weight. If you're using a parser to read three fields, read them directly
-- If a change requires disabling a lint rule, re-evaluate that change
-- No unnecessary constants
+- Re-evaluate diffs over 200 lines, and delete anything that can be removed.
+- Always double check library capabilities at the source for features missed or misued.
+- Never disable unnecessary lint rules
+- Delete constants that have single references
 
 ## Code comments
-- Remove code comments unless they are absolutely necessary
+- Always delete omments that restate the line below them
+- Always delete comments describing a library's documented behavior
+- Always delete comments narrating an absence.
+- Always delete comments justifying why the code isn't some other design
+- Always delete comments that restate session archaeology (what was tried, who asked, why a decision was made)
 - Don't leave performative or useless comments
 - Keep any comments written brief and to the point 
-- Don't leak unnecessary details from our session into a comment. For example don't add information about our back and forth discussion or details about why a decision was made unless it's relevant to the code.
-- Bias towards not leaving comments when code or config files are self documenting.
 
 ## Tests
 - Only add new test examples if there is genuinely missing coverage
