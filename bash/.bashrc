@@ -1,12 +1,15 @@
-# If not running interactively, don't do anything (leave this at the top of this file)
+# Omarchy environment (OMARCHY_PATH + PATH), needed even for non-interactive shells
+[[ -r /usr/share/omarchy/default/bash/env-bootstrap ]] && source /usr/share/omarchy/default/bash/env-bootstrap
+
+# If not running interactively, don't do anything else (leave this above the rc source)
 [[ $- != *i* ]] && return
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 #
-# This "if" check was written by jason so that way this bashrc can easily be used on macOS
-if [[ -f ~/.local/share/omarchy/default/bash/rc ]]; then
-  source ~/.local/share/omarchy/default/bash/rc
+# # This "if" check was written by jason so that way this bashrc can easily be used on macOS
+if [[ -f "$OMARCHY_PATH/default/bash/rc" ]]; then
+  source "$OMARCHY_PATH/default/bash/rc"
 else
   source ~/.bashrc.portable
 fi
