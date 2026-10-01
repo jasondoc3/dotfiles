@@ -7,7 +7,7 @@
   br = branch
   brm = branch -D
   cm = commit -m
-	co = checkout
+	co = checkout --ignore-other-worktrees
   cob = checkout -b
   df = diff
   dft = difftool
