@@ -12,8 +12,9 @@ If the following are unavailable, abort the skill and explain why.
 
 1. Run the /kiss skill
 2. Create or edit a pull request using the "gh" cli tool. New PRs should be created as drafts.
-3. Monitor the CI tasks in github.
+3. Monitor for CI failures or comments on the PR.
 4. If any CI tasks fail, query the results in circle CI using the CIRCLECI_TOKEN in the environment, if any.
+5. If any comments appear on the PR, don't reply. Fix anything obvious that comes up though.
 
 # Guidelines
 - Open new pull requests as drafts
